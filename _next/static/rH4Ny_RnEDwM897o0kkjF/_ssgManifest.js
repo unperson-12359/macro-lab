@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fcharts\u002F[slug]","\u002Fcharts\u002Fpage\u002F[page]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
