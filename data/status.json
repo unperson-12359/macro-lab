@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T17:06:08.458Z",
+  "updatedAt": "2026-07-21T17:08:26.403Z",
   "sources": {
     "btc-usd": {
       "ok": true,
@@ -7,6 +7,27 @@
       "sourceUrl": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d",
       "points": 3260,
       "lastPoint": "2026-07-20"
+    },
+    "lvmh": {
+      "ok": true,
+      "source": "yahoo",
+      "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MC.PA?interval=1d",
+      "points": 6821,
+      "lastPoint": "2026-07-21"
+    },
+    "richemont": {
+      "ok": true,
+      "source": "yahoo",
+      "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CFR.SW?interval=1d",
+      "points": 7977,
+      "lastPoint": "2026-07-21"
+    },
+    "swatch": {
+      "ok": true,
+      "source": "yahoo",
+      "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/UHR.SW?interval=1d",
+      "points": 7118,
+      "lastPoint": "2026-07-21"
     }
   }
 }
