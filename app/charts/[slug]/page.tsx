@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import fs from 'node:fs';
 import path from 'node:path';
 import DualSeriesChart, { type PrimaryMarker } from '@/components/DualSeriesChart';
@@ -47,6 +48,11 @@ export default function ChartPage({ params }: Props) {
   const overlayDisplay = smaDays ? movingAverage(overlay.points, smaDays) : overlay.points;
   const overlayLabel = smaDays ? `${overlay.name} · ${smaDays}-day avg` : overlay.name;
   const markerMode = chart.display?.overlayMode === 'markers';
+
+  const all = loadCharts();
+  const idx = all.findIndex((c) => c.slug === chart.slug);
+  const prev = idx > 0 ? all[idx - 1] : null;
+  const next = idx < all.length - 1 ? all[idx + 1] : null;
 
   return (
     <div>
@@ -107,6 +113,31 @@ export default function ChartPage({ params }: Props) {
         <h2 className="text-sm font-semibold">About this pairing</h2>
         <p className="mt-2 text-sm text-muted">{chart.explanation}</p>
       </section>
+
+      <nav aria-label="More charts" className="mt-12 flex flex-col gap-3 border-t border-line pt-5 sm:flex-row sm:items-baseline sm:justify-between">
+        {prev ? (
+          <Link rel="prev" href={`/charts/${prev.slug}`} className="group text-sm text-muted">
+            <span className="font-mono text-xs uppercase tracking-widest">Previous</span>
+            <span className="mt-1 block text-paper">
+              <span className="inline-block transition-transform duration-150 group-hover:-translate-x-1">←</span>{' '}
+              {prev.title}
+            </span>
+          </Link>
+        ) : (
+          <span />
+        )}
+        {next ? (
+          <Link rel="next" href={`/charts/${next.slug}`} className="group text-sm text-muted sm:text-right">
+            <span className="font-mono text-xs uppercase tracking-widest">Next</span>
+            <span className="mt-1 block text-paper">
+              {next.title}{' '}
+              <span className="inline-block transition-transform duration-150 group-hover:translate-x-1">→</span>
+            </span>
+          </Link>
+        ) : (
+          <span />
+        )}
+      </nav>
     </div>
   );
 }

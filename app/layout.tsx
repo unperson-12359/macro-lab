@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="min-h-screen bg-ink text-paper antialiased">
         <SiteNav />
-        <main className="mx-auto max-w-5xl px-4 py-10">{children}</main>
+        <main id="content" className="mx-auto max-w-5xl px-4 py-10">{children}</main>
         <footer className="border-t border-line">
           <div className="mx-auto max-w-5xl px-4 py-6 text-xs text-muted">
             Macro Lab — observation, not alpha.
