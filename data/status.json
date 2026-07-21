@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-07-21T17:08:26.403Z",
+  "updatedAt": "2026-07-21T21:46:06.608Z",
   "sources": {
     "btc-usd": {
       "ok": true,
       "source": "binance",
       "sourceUrl": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d",
-      "points": 3260,
+      "points": 5816,
       "lastPoint": "2026-07-20"
     },
     "lvmh": {
@@ -27,6 +27,55 @@
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/UHR.SW?interval=1d",
       "points": 7118,
+      "lastPoint": "2026-07-21"
+    },
+    "btc-usd-history": {
+      "ok": true,
+      "source": "blockchain.info",
+      "sourceUrl": "https://api.blockchain.info/charts/market-price?timespan=all&format=json",
+      "points": 2556,
+      "lastPoint": "2017-08-16"
+    },
+    "ferrari-race": {
+      "ok": true,
+      "source": "yahoo",
+      "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/RACE?interval=1d",
+      "points": 2701,
+      "lastPoint": "2026-07-21"
+    },
+    "live-cattle": {
+      "ok": true,
+      "source": "yahoo",
+      "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/LE=F?interval=1d",
+      "points": 6362,
+      "lastPoint": "2026-07-21"
+    },
+    "gamestop-gme": {
+      "ok": true,
+      "source": "yahoo",
+      "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GME?interval=1d",
+      "points": 6147,
+      "lastPoint": "2026-07-21"
+    },
+    "moon-illumination": {
+      "ok": true,
+      "source": "computed",
+      "sourceUrl": "mean synodic month 29.530588853d, anchor new moon 2000-01-06T18:14Z",
+      "points": 5817,
+      "lastPoint": "2026-07-21"
+    },
+    "sunspots-daily": {
+      "ok": true,
+      "source": "silso",
+      "sourceUrl": "https://www.sidc.be/SILSO/INFO/sndtotcsv.php",
+      "points": 5796,
+      "lastPoint": "2026-06-30"
+    },
+    "earthquakes-m6": {
+      "ok": true,
+      "source": "usgs",
+      "sourceUrl": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=6",
+      "points": 5817,
       "lastPoint": "2026-07-21"
     }
   }

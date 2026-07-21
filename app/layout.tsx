@@ -3,7 +3,7 @@ import SiteNav from '@/components/SiteNav';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'MacroPulse Labs',
+  title: 'Macro Lab',
   description: 'Unconventional Bitcoin indicators. Honestly labeled.',
 };
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="mx-auto max-w-5xl px-4 py-10">{children}</main>
         <footer className="border-t border-line">
           <div className="mx-auto max-w-5xl px-4 py-6 text-xs text-muted">
-            MacroPulse Labs — observation, not alpha.
+            Macro Lab — observation, not alpha.
           </div>
         </footer>
       </body>

@@ -1,0 +1,112 @@
+import { notFound } from 'next/navigation';
+import fs from 'node:fs';
+import path from 'node:path';
+import DualSeriesChart, { type PrimaryMarker } from '@/components/DualSeriesChart';
+import VerdictBadge from '@/components/VerdictBadge';
+import { loadCharts, loadSeries } from '@/lib/data';
+import { correlationOnReturns, movingAverage, toChartPoints, verdictFromR } from '@/lib/stats';
+
+interface Props {
+  params: { slug: string };
+}
+
+interface QuakeEvent {
+  d: string;
+  mag: number;
+}
+
+function loadQuakeMarkers(): PrimaryMarker[] {
+  const file = path.join(process.cwd(), 'data', 'events-earthquakes.json');
+  if (!fs.existsSync(file)) return [];
+  const events = JSON.parse(fs.readFileSync(file, 'utf8')) as QuakeEvent[];
+  return events.map((e) => ({
+    d: e.d,
+    color: e.mag >= 8 ? '#ef4444' : '#fbbf24',
+    ...(e.mag >= 8 ? { label: `M${e.mag.toFixed(1)}` } : {}),
+  }));
+}
+
+export function generateStaticParams() {
+  return loadCharts().map((chart) => ({ slug: chart.slug }));
+}
+
+export default function ChartPage({ params }: Props) {
+  const chart = loadCharts().find((c) => c.slug === params.slug);
+  if (!chart) notFound();
+
+  const primary = loadSeries(chart.primarySeriesId);
+  const overlay = loadSeries(chart.overlaySeriesId);
+  const { r, n } = correlationOnReturns(primary.points, overlay.points);
+  const verdict = verdictFromR(r);
+
+  const primaryLast = primary.points[primary.points.length - 1]?.d ?? '—';
+  const overlayLast = overlay.points[overlay.points.length - 1]?.d ?? '—';
+
+  // Display-only smoothing for noisy overlays; stats above use the raw series.
+  const smaDays = chart.display?.overlaySmaDays;
+  const overlayDisplay = smaDays ? movingAverage(overlay.points, smaDays) : overlay.points;
+  const overlayLabel = smaDays ? `${overlay.name} · ${smaDays}-day avg` : overlay.name;
+  const markerMode = chart.display?.overlayMode === 'markers';
+
+  return (
+    <div>
+      <div className="mb-6 flex items-start justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-semibold">{chart.title}</h1>
+          <p className="mt-1 text-sm text-muted">{chart.subtitle}</p>
+        </div>
+        <VerdictBadge verdict={verdict} />
+      </div>
+
+      <div className="mb-6 grid grid-cols-2 gap-4 font-mono text-xs text-muted sm:grid-cols-4">
+        <div>
+          <p className="uppercase tracking-wider">correlation r</p>
+          <p className="mt-1 text-base text-paper numbers">{r.toFixed(3)}</p>
+        </div>
+        <div>
+          <p className="uppercase tracking-wider">overlap days</p>
+          <p className="mt-1 text-base text-paper numbers">{n}</p>
+        </div>
+        <div>
+          <p className="uppercase tracking-wider">{primary.name} through</p>
+          <p className="mt-1 text-base text-paper numbers">{primaryLast}</p>
+        </div>
+        <div>
+          <p className="uppercase tracking-wider">{overlay.name} through</p>
+          <p className="mt-1 text-base text-paper numbers">{overlayLast}</p>
+        </div>
+      </div>
+
+      <DualSeriesChart
+        primary={toChartPoints(primary.points)}
+        primaryLabel={primary.name}
+        overlay={markerMode ? undefined : toChartPoints(overlayDisplay)}
+        overlayLabel={overlayLabel}
+        overlayLog={chart.display?.overlayLog ?? true}
+        primaryMarkers={markerMode ? loadQuakeMarkers() : undefined}
+      />
+
+      {markerMode && (
+        <p className="mt-2 font-mono text-xs text-muted">
+          <span className="mr-1 inline-block h-2 w-2 rounded-full bg-[#fbbf24]" />
+          M7+ earthquake ·{' '}
+          <span className="mr-1 inline-block h-2 w-2 rounded-full bg-[#ef4444]" />
+          M8+ (labeled) — occurrences plotted along the BTC price; correlation above is vs the
+          7-day M6+ count.
+        </p>
+      )}
+
+      <p className="mt-6 text-sm italic text-muted">{chart.oneLiner}</p>
+      <p className="mt-4 max-w-2xl text-xs text-muted">
+        Correlation is computed on daily returns over the {n} days where both series have data. Two
+        lines moving together proves nothing about causation, and a high r on a hand-picked pair is
+        usually a coincidence with good marketing. Observation, not alpha.
+      </p>
+
+      <section className="mt-6 max-w-2xl border-t border-line pt-4">
+        <h2 className="text-sm font-semibold">About this pairing</h2>
+        <p className="mt-2 text-sm text-muted">{chart.explanation}</p>
+      </section>
+    </div>
+  );
+}

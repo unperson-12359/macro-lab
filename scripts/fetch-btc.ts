@@ -72,7 +72,7 @@ async function main(): Promise<void> {
 
   const series: Series = {
     id: 'btc-usd',
-    name: 'Bitcoin (BTC/USDT)',
+    name: 'Bitcoin (BTC/USD)',
     unit: 'USD',
     source: SOURCE,
     sourceUrl: SOURCE_URL,

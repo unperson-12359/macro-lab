@@ -1,0 +1,1172 @@
+[
+  {
+    "d": "2015-07-27",
+    "mag": 7,
+    "place": "234 km W of Abepura, Indonesia"
+  },
+  {
+    "d": "2015-07-18",
+    "mag": 7,
+    "place": "80 km WNW of Lata, Solomon Islands"
+  },
+  {
+    "d": "2015-06-17",
+    "mag": 7,
+    "place": "southern Mid-Atlantic Ridge"
+  },
+  {
+    "d": "2015-05-30",
+    "mag": 7.8,
+    "place": "Bonin Islands, Japan region"
+  },
+  {
+    "d": "2015-05-12",
+    "mag": 7.3,
+    "place": "Nepal"
+  },
+  {
+    "d": "2015-05-07",
+    "mag": 7.1,
+    "place": "143 km SW of Panguna, Papua New Guinea"
+  },
+  {
+    "d": "2015-05-05",
+    "mag": 7.5,
+    "place": "131 km SSW of Kokopo, Papua New Guinea"
+  },
+  {
+    "d": "2015-04-25",
+    "mag": 7.8,
+    "place": "67 km NNE of Bharatpur, Nepal"
+  },
+  {
+    "d": "2015-03-29",
+    "mag": 7.5,
+    "place": "53 km SE of Kokopo, Papua New Guinea"
+  },
+  {
+    "d": "2015-02-27",
+    "mag": 7,
+    "place": "150 km NNE of Maumere, Indonesia"
+  },
+  {
+    "d": "2015-02-13",
+    "mag": 7.1,
+    "place": "northern Mid-Atlantic Ridge"
+  },
+  {
+    "d": "2014-11-15",
+    "mag": 7.1,
+    "place": "155 km NW of Ternate, Indonesia"
+  },
+  {
+    "d": "2014-11-01",
+    "mag": 7.1,
+    "place": "Fiji region"
+  },
+  {
+    "d": "2014-10-14",
+    "mag": 7.3,
+    "place": "74 km S of Intipucá, El Salvador"
+  },
+  {
+    "d": "2014-10-09",
+    "mag": 7,
+    "place": "southern East Pacific Rise"
+  },
+  {
+    "d": "2014-06-23",
+    "mag": 7.9,
+    "place": "Rat Islands, Aleutian Islands, Alaska"
+  },
+  {
+    "d": "2014-04-19",
+    "mag": 7.5,
+    "place": "70 km SW of Panguna, Papua New Guinea"
+  },
+  {
+    "d": "2014-04-18",
+    "mag": 7.2,
+    "place": "9 km ENE of Coyuquilla Norte, Mexico"
+  },
+  {
+    "d": "2014-04-13",
+    "mag": 7.4,
+    "place": "112 km S of Kirakira, Solomon Islands"
+  },
+  {
+    "d": "2014-04-12",
+    "mag": 7.6,
+    "place": "93 km SSE of Kirakira, Solomon Islands"
+  },
+  {
+    "d": "2014-04-11",
+    "mag": 7.1,
+    "place": "56 km WSW of Panguna, Papua New Guinea"
+  },
+  {
+    "d": "2014-04-03",
+    "mag": 7.7,
+    "place": "53 km SW of Iquique, Chile"
+  },
+  {
+    "d": "2014-04-01",
+    "mag": 8.2,
+    "place": "93 km NW of Iquique, Chile"
+  },
+  {
+    "d": "2013-11-25",
+    "mag": 7,
+    "place": "Falkland Islands region"
+  },
+  {
+    "d": "2013-11-17",
+    "mag": 7.7,
+    "place": "Scotia Sea"
+  },
+  {
+    "d": "2013-10-25",
+    "mag": 7.1,
+    "place": "off the east coast of Honshu, Japan"
+  },
+  {
+    "d": "2013-10-15",
+    "mag": 7.1,
+    "place": "4 km SE of Sagbayan, Philippines"
+  },
+  {
+    "d": "2013-09-25",
+    "mag": 7.1,
+    "place": "16 km WSW of Atiquipa, Peru"
+  },
+  {
+    "d": "2013-09-24",
+    "mag": 7.7,
+    "place": "113 km NW of Bela, Pakistan"
+  },
+  {
+    "d": "2013-08-30",
+    "mag": 7,
+    "place": "101 km SW of Atka, Alaska"
+  },
+  {
+    "d": "2013-07-15",
+    "mag": 7.3,
+    "place": "South Sandwich Islands region"
+  },
+  {
+    "d": "2013-07-07",
+    "mag": 7.3,
+    "place": "190 km ENE of Kokopo, Papua New Guinea"
+  },
+  {
+    "d": "2013-05-24",
+    "mag": 8.3,
+    "place": "2013 Sea of Okhotsk Earthquake"
+  },
+  {
+    "d": "2013-05-23",
+    "mag": 7.4,
+    "place": "292 km SW of Vaini, Tonga"
+  },
+  {
+    "d": "2013-04-19",
+    "mag": 7.2,
+    "place": "252 km ENE of Kuril’sk, Russia"
+  },
+  {
+    "d": "2013-04-16",
+    "mag": 7.7,
+    "place": "79 km ESE of Kh?sh, Iran"
+  },
+  {
+    "d": "2013-04-06",
+    "mag": 7,
+    "place": "260 km WSW of Abepura, Indonesia"
+  },
+  {
+    "d": "2013-02-08",
+    "mag": 7.1,
+    "place": "32 km SE of Lata, Solomon Islands"
+  },
+  {
+    "d": "2013-02-06",
+    "mag": 7,
+    "place": "33 km NW of Lata, Solomon Islands"
+  },
+  {
+    "d": "2013-02-06",
+    "mag": 7.1,
+    "place": "112 km WSW of Lata, Solomon Islands"
+  },
+  {
+    "d": "2013-02-06",
+    "mag": 8,
+    "place": "2013 Santa Cruz Islands Earthquake"
+  },
+  {
+    "d": "2013-01-05",
+    "mag": 7.5,
+    "place": "110 km SW of Edna Bay, Alaska"
+  },
+  {
+    "d": "2012-12-10",
+    "mag": 7.1,
+    "place": "Banda Sea"
+  },
+  {
+    "d": "2012-12-07",
+    "mag": 7.3,
+    "place": "234 km SE of ?funato, Japan"
+  },
+  {
+    "d": "2012-11-07",
+    "mag": 7.4,
+    "place": "33 km S of Champerico, Guatemala"
+  },
+  {
+    "d": "2012-10-28",
+    "mag": 7.8,
+    "place": "206 km SW of Prince Rupert, Canada"
+  },
+  {
+    "d": "2012-09-30",
+    "mag": 7.3,
+    "place": "11 km WNW of San Agustín, Colombia"
+  },
+  {
+    "d": "2012-09-05",
+    "mag": 7.6,
+    "place": "11 km ENE of Hojancha, Costa Rica"
+  },
+  {
+    "d": "2012-08-31",
+    "mag": 7.6,
+    "place": "89 km E of Sulangan, Philippines"
+  },
+  {
+    "d": "2012-08-27",
+    "mag": 7.3,
+    "place": "126 km S of Puerto El Triunfo, El Salvador"
+  },
+  {
+    "d": "2012-08-14",
+    "mag": 7.7,
+    "place": "156 km ENE of Poronaysk, Russia"
+  },
+  {
+    "d": "2012-04-12",
+    "mag": 7,
+    "place": "69 km ENE of San Luis, Mexico"
+  },
+  {
+    "d": "2012-04-11",
+    "mag": 8.2,
+    "place": "2012 Wharton Basin Aftershock"
+  },
+  {
+    "d": "2012-04-11",
+    "mag": 8.6,
+    "place": "2012 Wharton Basin Earthquake"
+  },
+  {
+    "d": "2012-03-25",
+    "mag": 7.1,
+    "place": "23 km NE of Constitución, Chile"
+  },
+  {
+    "d": "2012-03-20",
+    "mag": 7.4,
+    "place": "6 km E of Santiago Llano Grande, Mexico"
+  },
+  {
+    "d": "2012-02-02",
+    "mag": 7.1,
+    "place": "125 km W of Port-Vila, Vanuatu"
+  },
+  {
+    "d": "2012-01-10",
+    "mag": 7.2,
+    "place": "off the west coast of northern Sumatra"
+  },
+  {
+    "d": "2011-12-14",
+    "mag": 7.1,
+    "place": "25 km SSE of Wau, Papua New Guinea"
+  },
+  {
+    "d": "2011-10-23",
+    "mag": 7.1,
+    "place": "27 km NNE of Van, Turkey"
+  },
+  {
+    "d": "2011-10-21",
+    "mag": 7.4,
+    "place": "Kermadec Islands region"
+  },
+  {
+    "d": "2011-09-15",
+    "mag": 7.3,
+    "place": "Fiji region"
+  },
+  {
+    "d": "2011-09-03",
+    "mag": 7,
+    "place": "133 km SSE of Isangel, Vanuatu"
+  },
+  {
+    "d": "2011-08-24",
+    "mag": 7,
+    "place": "64 km ESE of Contamana, Peru"
+  },
+  {
+    "d": "2011-08-20",
+    "mag": 7.1,
+    "place": "64 km S of Port-Vila, Vanuatu"
+  },
+  {
+    "d": "2011-08-20",
+    "mag": 7.2,
+    "place": "71 km SSW of Port-Vila, Vanuatu"
+  },
+  {
+    "d": "2011-07-10",
+    "mag": 7,
+    "place": "177 km ESE of Ishinomaki, Japan"
+  },
+  {
+    "d": "2011-07-06",
+    "mag": 7.6,
+    "place": "Kermadec Islands region"
+  },
+  {
+    "d": "2011-06-24",
+    "mag": 7.3,
+    "place": "Fox Islands, Aleutian Islands, Alaska"
+  },
+  {
+    "d": "2011-04-07",
+    "mag": 7.1,
+    "place": "29 km ESE of Ishinomaki, Japan"
+  },
+  {
+    "d": "2011-03-11",
+    "mag": 7.7,
+    "place": "272 km ESE of Kamaishi, Japan"
+  },
+  {
+    "d": "2011-03-11",
+    "mag": 7.9,
+    "place": "47 km E of ?arai, Japan"
+  },
+  {
+    "d": "2011-03-11",
+    "mag": 9.1,
+    "place": "2011 Great Tohoku Earthquake, Japan"
+  },
+  {
+    "d": "2011-03-09",
+    "mag": 7.3,
+    "place": "120 km SE of ?funato, Japan"
+  },
+  {
+    "d": "2011-01-18",
+    "mag": 7.2,
+    "place": "46 km WSW of Dalbandin, Pakistan"
+  },
+  {
+    "d": "2011-01-13",
+    "mag": 7,
+    "place": "118 km NNE of Tadine, New Caledonia"
+  },
+  {
+    "d": "2011-01-02",
+    "mag": 7.2,
+    "place": "42 km NNW of Carahue, Chile"
+  },
+  {
+    "d": "2011-01-01",
+    "mag": 7,
+    "place": "26 km NNE of El Hoyo, Argentina"
+  },
+  {
+    "d": "2010-12-25",
+    "mag": 7.3,
+    "place": "141 km W of Isangel, Vanuatu"
+  },
+  {
+    "d": "2010-12-21",
+    "mag": 7.4,
+    "place": "Bonin Islands, Japan region"
+  },
+  {
+    "d": "2010-10-25",
+    "mag": 7.8,
+    "place": "215 km SW of Sungai Penuh, Indonesia"
+  },
+  {
+    "d": "2010-09-29",
+    "mag": 7,
+    "place": "Near the south coast of Papua, Indonesia"
+  },
+  {
+    "d": "2010-09-03",
+    "mag": 7,
+    "place": "19 km NE of Methven, New Zealand"
+  },
+  {
+    "d": "2020-07-22",
+    "mag": 7.8,
+    "place": "2020 Perryville, Alaska Earthquake"
+  },
+  {
+    "d": "2020-07-17",
+    "mag": 7,
+    "place": "114 km NNW of Popondetta, Papua New Guinea"
+  },
+  {
+    "d": "2020-06-23",
+    "mag": 7.4,
+    "place": "9 km SE of Santa María Xadani, Mexico"
+  },
+  {
+    "d": "2020-06-18",
+    "mag": 7.4,
+    "place": "south of the Kermadec Islands"
+  },
+  {
+    "d": "2020-03-25",
+    "mag": 7.5,
+    "place": "221 km SSE of Severo-Kuril’sk, Russia"
+  },
+  {
+    "d": "2020-02-13",
+    "mag": 7,
+    "place": "95 km ENE of Kuril’sk, Russia"
+  },
+  {
+    "d": "2020-01-28",
+    "mag": 7.7,
+    "place": "123 km NNW of Lucea, Jamaica"
+  },
+  {
+    "d": "2019-11-14",
+    "mag": 7.1,
+    "place": "141 km NW of Ternate, Indonesia"
+  },
+  {
+    "d": "2019-07-14",
+    "mag": 7.2,
+    "place": "155 km SSE of Sofifi, Indonesia"
+  },
+  {
+    "d": "2019-07-06",
+    "mag": 7.1,
+    "place": "Ridgecrest Earthquake Sequence"
+  },
+  {
+    "d": "2019-06-24",
+    "mag": 7.3,
+    "place": "Banda Sea"
+  },
+  {
+    "d": "2019-06-15",
+    "mag": 7.3,
+    "place": "Kermadec Islands, New Zealand"
+  },
+  {
+    "d": "2019-05-26",
+    "mag": 8,
+    "place": "78 km NE of Navarro, Peru"
+  },
+  {
+    "d": "2019-05-14",
+    "mag": 7.6,
+    "place": "48 km NE of Kokopo, Papua New Guinea"
+  },
+  {
+    "d": "2019-05-06",
+    "mag": 7.1,
+    "place": "32 km NW of Bulolo, Papua New Guinea"
+  },
+  {
+    "d": "2019-03-01",
+    "mag": 7,
+    "place": "22 km NNE of Azángaro, Peru"
+  },
+  {
+    "d": "2019-02-22",
+    "mag": 7.5,
+    "place": "115 km ESE of Palora, Ecuador"
+  },
+  {
+    "d": "2018-12-29",
+    "mag": 7,
+    "place": "96 km ESE of Pondaguitan, Philippines"
+  },
+  {
+    "d": "2018-12-20",
+    "mag": 7.3,
+    "place": "187 km SE of Ust’-Kamchatsk Staryy, Russia"
+  },
+  {
+    "d": "2018-12-11",
+    "mag": 7.1,
+    "place": "South Sandwich Islands region"
+  },
+  {
+    "d": "2018-12-05",
+    "mag": 7.5,
+    "place": "166 km ESE of Tadine, New Caledonia"
+  },
+  {
+    "d": "2018-11-30",
+    "mag": 7.1,
+    "place": "1 km SE of Point MacKenzie, Alaska"
+  },
+  {
+    "d": "2018-10-10",
+    "mag": 7,
+    "place": "119 km E of Kimbe, Papua New Guinea"
+  },
+  {
+    "d": "2018-09-28",
+    "mag": 7.5,
+    "place": "72 km N of Palu, Indonesia"
+  },
+  {
+    "d": "2018-09-06",
+    "mag": 7.9,
+    "place": "45 km S of Levuka, Fiji"
+  },
+  {
+    "d": "2018-08-29",
+    "mag": 7.1,
+    "place": "238 km ESE of Tadine, New Caledonia"
+  },
+  {
+    "d": "2018-08-24",
+    "mag": 7.1,
+    "place": "136 km W of Iñapari, Peru"
+  },
+  {
+    "d": "2018-08-21",
+    "mag": 7.3,
+    "place": "40 km ENE of Carúpano, Venezuela"
+  },
+  {
+    "d": "2018-08-19",
+    "mag": 8.2,
+    "place": "2018 Fiji Earthquake"
+  },
+  {
+    "d": "2018-02-25",
+    "mag": 7.5,
+    "place": "32 km SW of Tari, Papua New Guinea"
+  },
+  {
+    "d": "2018-02-16",
+    "mag": 7.2,
+    "place": "4 km S of Pinotepa de Don Luis, Mexico"
+  },
+  {
+    "d": "2018-01-23",
+    "mag": 7.9,
+    "place": "261 km SE of Chiniak, Alaska"
+  },
+  {
+    "d": "2018-01-14",
+    "mag": 7.1,
+    "place": "37 km W of Atiquipa, Peru"
+  },
+  {
+    "d": "2018-01-10",
+    "mag": 7.5,
+    "place": "203 km NNE of Barra Patuca, Honduras"
+  },
+  {
+    "d": "2017-11-19",
+    "mag": 7,
+    "place": "85 km ENE of Tadine, New Caledonia"
+  },
+  {
+    "d": "2017-11-12",
+    "mag": 7.3,
+    "place": "29 km S of ?alabja, Iraq"
+  },
+  {
+    "d": "2017-09-19",
+    "mag": 7.1,
+    "place": "1 km S of Matzaco, Mexico"
+  },
+  {
+    "d": "2017-09-08",
+    "mag": 8.2,
+    "place": "2017 Tehuantepec, Mexico Earthquake"
+  },
+  {
+    "d": "2017-07-17",
+    "mag": 7.7,
+    "place": "Komandorskiye Ostrova, Russia region"
+  },
+  {
+    "d": "2017-01-22",
+    "mag": 7.9,
+    "place": "35 km WNW of Panguna, Papua New Guinea"
+  },
+  {
+    "d": "2017-01-10",
+    "mag": 7.3,
+    "place": "189 km SSE of Tabiauan, Philippines"
+  },
+  {
+    "d": "2016-12-25",
+    "mag": 7.6,
+    "place": "41 km SW of Quellón, Chile"
+  },
+  {
+    "d": "2016-12-17",
+    "mag": 7.9,
+    "place": "140 km E of Kokopo, Papua New Guinea"
+  },
+  {
+    "d": "2016-12-08",
+    "mag": 7.8,
+    "place": "69 km WSW of Kirakira, Solomon Islands"
+  },
+  {
+    "d": "2016-11-13",
+    "mag": 7.8,
+    "place": "53 km NNE of Amberley, New Zealand"
+  },
+  {
+    "d": "2016-09-01",
+    "mag": 7,
+    "place": "175 km NE of Gisborne, New Zealand"
+  },
+  {
+    "d": "2016-08-29",
+    "mag": 7.1,
+    "place": "north of Ascension Island"
+  },
+  {
+    "d": "2016-08-19",
+    "mag": 7.4,
+    "place": "South Georgia Island region"
+  },
+  {
+    "d": "2016-08-12",
+    "mag": 7.2,
+    "place": "southeast of the Loyalty Islands"
+  },
+  {
+    "d": "2016-07-29",
+    "mag": 7.7,
+    "place": "Pagan region, Northern Mariana Islands"
+  },
+  {
+    "d": "2016-05-28",
+    "mag": 7.2,
+    "place": "South Sandwich Islands region"
+  },
+  {
+    "d": "2016-04-28",
+    "mag": 7,
+    "place": "3 km NW of Norsup, Vanuatu"
+  },
+  {
+    "d": "2016-04-16",
+    "mag": 7.8,
+    "place": "27 km SSE of Muisne, Ecuador"
+  },
+  {
+    "d": "2016-04-15",
+    "mag": 7,
+    "place": "6 km ESE of Kumamoto, Japan"
+  },
+  {
+    "d": "2016-03-02",
+    "mag": 7.8,
+    "place": "southwest of Sumatra, Indonesia"
+  },
+  {
+    "d": "2016-01-30",
+    "mag": 7.2,
+    "place": "80 km S of Mil’kovo, Russia"
+  },
+  {
+    "d": "2016-01-24",
+    "mag": 7.1,
+    "place": "47 km ESE of Pedro Bay, Alaska"
+  },
+  {
+    "d": "2015-12-07",
+    "mag": 7.2,
+    "place": "104 km W of Murghob, Tajikistan"
+  },
+  {
+    "d": "2015-12-04",
+    "mag": 7.1,
+    "place": "southeast Indian Ridge"
+  },
+  {
+    "d": "2015-11-24",
+    "mag": 7.6,
+    "place": "185 km WNW of Iñapari, Peru"
+  },
+  {
+    "d": "2015-11-24",
+    "mag": 7.6,
+    "place": "155 km WNW of Iñapari, Peru"
+  },
+  {
+    "d": "2015-10-26",
+    "mag": 7.5,
+    "place": "Hindu Kush region, Afghanistan"
+  },
+  {
+    "d": "2015-10-20",
+    "mag": 7.1,
+    "place": "31 km NE of Port-Olry, Vanuatu"
+  },
+  {
+    "d": "2015-09-16",
+    "mag": 7,
+    "place": "25 km WNW of Illapel, Chile"
+  },
+  {
+    "d": "2015-09-16",
+    "mag": 8.3,
+    "place": "48 km W of Illapel, Chile"
+  },
+  {
+    "d": "2025-07-29",
+    "mag": 8.8,
+    "place": "2025 Kamchatka Peninsula, Russia Earthquake"
+  },
+  {
+    "d": "2025-07-28",
+    "mag": 7,
+    "place": "Macquarie Island region"
+  },
+  {
+    "d": "2025-07-20",
+    "mag": 7.4,
+    "place": "2025 Eastern Kamchatka, Russia Earthquake"
+  },
+  {
+    "d": "2025-07-16",
+    "mag": 7.3,
+    "place": "2025 Sand Point, Alaska Earthquake"
+  },
+  {
+    "d": "2025-05-02",
+    "mag": 7.4,
+    "place": "2025 Drake Passage Earthquake"
+  },
+  {
+    "d": "2025-03-30",
+    "mag": 7,
+    "place": "61 km SSE of Pangai, Tonga"
+  },
+  {
+    "d": "2025-03-28",
+    "mag": 7.7,
+    "place": "2025 Mandalay, Burma (Myanmar) Earthquake"
+  },
+  {
+    "d": "2025-02-08",
+    "mag": 7.6,
+    "place": "210 km SSW of George Town, Cayman Islands"
+  },
+  {
+    "d": "2025-01-07",
+    "mag": 7.1,
+    "place": "2025 Southern Tibetan Plateau Earthquake"
+  },
+  {
+    "d": "2024-12-17",
+    "mag": 7.3,
+    "place": "24 km WNW of Port-Vila, Vanuatu"
+  },
+  {
+    "d": "2024-12-05",
+    "mag": 7,
+    "place": "2024 Offshore Cape Mendocino, California Earthquake"
+  },
+  {
+    "d": "2024-08-17",
+    "mag": 7,
+    "place": "102 km E of Petropavlovsk-Kamchatsky, Russia"
+  },
+  {
+    "d": "2024-08-08",
+    "mag": 7.1,
+    "place": "2024 Hyuganada Sea, Japan Earthquake"
+  },
+  {
+    "d": "2024-07-19",
+    "mag": 7.4,
+    "place": "41 km ESE of San Pedro de Atacama, Chile"
+  },
+  {
+    "d": "2024-07-11",
+    "mag": 7.1,
+    "place": "106 km WSW of Sangay, Philippines"
+  },
+  {
+    "d": "2024-06-28",
+    "mag": 7.2,
+    "place": "10 km WSW of Atiquipa, Peru"
+  },
+  {
+    "d": "2024-04-02",
+    "mag": 7.4,
+    "place": "15 km S of Hualien City, Taiwan"
+  },
+  {
+    "d": "2024-01-22",
+    "mag": 7,
+    "place": "128 km WNW of Aykol, China"
+  },
+  {
+    "d": "2024-01-01",
+    "mag": 7.5,
+    "place": "2024 Noto Peninsula, Japan Earthquake"
+  },
+  {
+    "d": "2023-12-07",
+    "mag": 7.1,
+    "place": "118 km S of Isangel, Vanuatu"
+  },
+  {
+    "d": "2023-12-02",
+    "mag": 7.6,
+    "place": "19 km E of Gamut, Philippines"
+  },
+  {
+    "d": "2023-11-08",
+    "mag": 7.1,
+    "place": "Banda Sea"
+  },
+  {
+    "d": "2023-08-28",
+    "mag": 7.1,
+    "place": "180 km NNE of Gili Air, Indonesia"
+  },
+  {
+    "d": "2023-07-16",
+    "mag": 7.2,
+    "place": "2023 Sand Point, Alaska Earthquake"
+  },
+  {
+    "d": "2023-06-15",
+    "mag": 7.2,
+    "place": "274 km SW of Houma, Tonga"
+  },
+  {
+    "d": "2023-05-20",
+    "mag": 7.1,
+    "place": "southeast of the Loyalty Islands"
+  },
+  {
+    "d": "2023-05-19",
+    "mag": 7.7,
+    "place": "southeast of the Loyalty Islands"
+  },
+  {
+    "d": "2023-05-10",
+    "mag": 7.6,
+    "place": "82 km WNW of Hihifo, Tonga"
+  },
+  {
+    "d": "2023-04-24",
+    "mag": 7.1,
+    "place": "171 km SSE of Teluk Dalam, Indonesia"
+  },
+  {
+    "d": "2023-04-24",
+    "mag": 7.1,
+    "place": "Kermadec Islands, New Zealand"
+  },
+  {
+    "d": "2023-04-14",
+    "mag": 7,
+    "place": "Java, Indonesia"
+  },
+  {
+    "d": "2023-04-02",
+    "mag": 7,
+    "place": "40 km ESE of Ambunti, Papua New Guinea"
+  },
+  {
+    "d": "2023-03-16",
+    "mag": 7,
+    "place": "Kermadec Islands region"
+  },
+  {
+    "d": "2023-02-06",
+    "mag": 7.5,
+    "place": "Elbistan earthquake, Kahramanmaras earthquake sequence"
+  },
+  {
+    "d": "2023-02-06",
+    "mag": 7.8,
+    "place": "Pazarcik earthquake, Kahramanmaras earthquake sequence"
+  },
+  {
+    "d": "2023-01-18",
+    "mag": 7,
+    "place": "156 km NW of Tobelo, Indonesia"
+  },
+  {
+    "d": "2023-01-09",
+    "mag": 7.6,
+    "place": "Pulau Pulau Tanimbar, Indonesia"
+  },
+  {
+    "d": "2023-01-08",
+    "mag": 7,
+    "place": "23 km WNW of Port-Olry, Vanuatu"
+  },
+  {
+    "d": "2022-11-22",
+    "mag": 7,
+    "place": "18 km SW of Malango, Solomon Islands"
+  },
+  {
+    "d": "2022-11-12",
+    "mag": 7,
+    "place": "Fiji region"
+  },
+  {
+    "d": "2022-11-11",
+    "mag": 7.3,
+    "place": "205 km ESE of Neiafu, Tonga"
+  },
+  {
+    "d": "2022-11-09",
+    "mag": 7,
+    "place": "south of the Fiji Islands"
+  },
+  {
+    "d": "2022-09-19",
+    "mag": 7.6,
+    "place": "35 km SSW of Aguililla, Mexico"
+  },
+  {
+    "d": "2022-09-14",
+    "mag": 7,
+    "place": "209 km SSE of Isangel, Vanuatu"
+  },
+  {
+    "d": "2022-09-10",
+    "mag": 7.6,
+    "place": "70 km E of Kainantu, Papua New Guinea"
+  },
+  {
+    "d": "2022-07-27",
+    "mag": 7,
+    "place": "11 km NE of Bantay, Philippines"
+  },
+  {
+    "d": "2022-05-26",
+    "mag": 7.2,
+    "place": "10 km W of Azángaro, Peru"
+  },
+  {
+    "d": "2022-03-31",
+    "mag": 7,
+    "place": "southeast of the Loyalty Islands"
+  },
+  {
+    "d": "2022-03-16",
+    "mag": 7.3,
+    "place": "57 km ENE of Namie, Japan"
+  },
+  {
+    "d": "2021-12-29",
+    "mag": 7.3,
+    "place": "125 km NNE of Lospalos, Timor Leste"
+  },
+  {
+    "d": "2021-12-14",
+    "mag": 7.3,
+    "place": "Flores Sea"
+  },
+  {
+    "d": "2021-11-28",
+    "mag": 7.5,
+    "place": "43 km NNW of Barranca, Peru"
+  },
+  {
+    "d": "2021-10-02",
+    "mag": 7.3,
+    "place": "Vanuatu region"
+  },
+  {
+    "d": "2021-09-08",
+    "mag": 7,
+    "place": "Acapulco, Mexico"
+  },
+  {
+    "d": "2021-08-22",
+    "mag": 7.1,
+    "place": "South Sandwich Islands region"
+  },
+  {
+    "d": "2021-08-14",
+    "mag": 7.2,
+    "place": "Nippes, Haiti"
+  },
+  {
+    "d": "2021-08-12",
+    "mag": 8.1,
+    "place": "2021 South Sandwich Islands Earthquake"
+  },
+  {
+    "d": "2021-08-12",
+    "mag": 7.5,
+    "place": "South Sandwich Islands region"
+  },
+  {
+    "d": "2021-08-11",
+    "mag": 7.1,
+    "place": "60 km ENE of Pondaguitan, Philippines"
+  },
+  {
+    "d": "2021-07-29",
+    "mag": 8.2,
+    "place": "2021 Chignik, Alaska Earthquake"
+  },
+  {
+    "d": "2021-05-21",
+    "mag": 7.3,
+    "place": "Southern Qinghai, China"
+  },
+  {
+    "d": "2021-03-20",
+    "mag": 7,
+    "place": "30 km E of Ishinomaki, Japan"
+  },
+  {
+    "d": "2021-03-04",
+    "mag": 8.1,
+    "place": "2021 Kermadec Islands, New Zealand Earthquake"
+  },
+  {
+    "d": "2021-03-04",
+    "mag": 7.4,
+    "place": "Kermadec Islands, New Zealand"
+  },
+  {
+    "d": "2021-03-04",
+    "mag": 7.3,
+    "place": "182 km NE of Gisborne, New Zealand"
+  },
+  {
+    "d": "2021-02-13",
+    "mag": 7.1,
+    "place": "73 km ENE of Namie, Japan"
+  },
+  {
+    "d": "2021-02-10",
+    "mag": 7.7,
+    "place": "southeast of the Loyalty Islands"
+  },
+  {
+    "d": "2021-01-21",
+    "mag": 7,
+    "place": "211 km SE of Pondaguitan, Philippines"
+  },
+  {
+    "d": "2020-10-30",
+    "mag": 7,
+    "place": "13 km NNE of Néon Karlovásion, Greece"
+  },
+  {
+    "d": "2020-10-19",
+    "mag": 7.6,
+    "place": "2020 Sand Point, Alaska Earthquake"
+  },
+  {
+    "d": "2026-07-17",
+    "mag": 7.3,
+    "place": "58 km WSW of Puerto Madero, Mexico"
+  },
+  {
+    "d": "2026-06-24",
+    "mag": 7.5,
+    "place": "20 km ESE of Yumare, Venezuela"
+  },
+  {
+    "d": "2026-06-24",
+    "mag": 7.2,
+    "place": "21 km ENE of San Felipe, Venezuela"
+  },
+  {
+    "d": "2026-06-07",
+    "mag": 7.8,
+    "place": "25 km SW of Kablalan, Philippines"
+  },
+  {
+    "d": "2026-04-20",
+    "mag": 7.4,
+    "place": "102 km ENE of Miyako, Japan"
+  },
+  {
+    "d": "2026-04-01",
+    "mag": 7.4,
+    "place": "129 km ESE of Bitung, Indonesia"
+  },
+  {
+    "d": "2026-03-30",
+    "mag": 7.3,
+    "place": "51 km ENE of Luganville, Vanuatu"
+  },
+  {
+    "d": "2026-03-24",
+    "mag": 7.5,
+    "place": "158 km W of Neiafu, Tonga"
+  },
+  {
+    "d": "2026-02-22",
+    "mag": 7.1,
+    "place": "57 km NNW of Kota Belud, Malaysia"
+  },
+  {
+    "d": "2025-12-08",
+    "mag": 7.6,
+    "place": "2025 Aomori Prefecture, Japan Earthquake"
+  },
+  {
+    "d": "2025-12-06",
+    "mag": 7,
+    "place": "2025 Hubbard Glacier Earthquake"
+  },
+  {
+    "d": "2025-10-10",
+    "mag": 7.6,
+    "place": "Drake Passage"
+  },
+  {
+    "d": "2025-10-10",
+    "mag": 7.4,
+    "place": "12 km E of Santiago, Philippines"
+  },
+  {
+    "d": "2025-09-18",
+    "mag": 7.8,
+    "place": "140 km E of Petropavlovsk-Kamchatsky, Russia"
+  },
+  {
+    "d": "2025-09-13",
+    "mag": 7.4,
+    "place": "105 km E of Petropavlovsk-Kamchatsky, Russia"
+  },
+  {
+    "d": "2025-08-22",
+    "mag": 7.5,
+    "place": "2025 Southern Drake Passage Earthquake"
+  }
+]

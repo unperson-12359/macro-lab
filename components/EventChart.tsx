@@ -10,24 +10,12 @@ import {
   type SeriesMarker,
   type Time,
 } from 'lightweight-charts';
-import type { ChartPoint } from '@/lib/types';
-
-export interface PrimaryMarker {
-  d: string;
-  label?: string;
-  color: string;
-}
+import type { ChartPoint, EventSet } from '@/lib/types';
 
 interface Props {
   primary: ChartPoint[];
   primaryLabel: string;
-  /** Omit both to render the primary series alone (marker mode). */
-  overlay?: ChartPoint[];
-  overlayLabel?: string;
-  /** false keeps the overlay on a linear scale even when log is on (counts, percents). */
-  overlayLog?: boolean;
-  /** Occurrence markers drawn on the primary series. */
-  primaryMarkers?: PrimaryMarker[];
+  eventSets: EventSet[];
 }
 
 const AXIS = {
@@ -46,20 +34,20 @@ const TIMEFRAMES = [
 
 type TimeframeId = (typeof TIMEFRAMES)[number]['id'];
 
-const CONTROL_BTN =
-  'rounded border px-2 py-0.5 font-mono text-xs transition-colors';
+const CONTROL_BTN = 'rounded border px-2 py-0.5 font-mono text-xs transition-colors';
 const CONTROL_ACTIVE = 'border-[#f7931a]/50 bg-[#f7931a]/10 text-[#f7931a]';
 const CONTROL_IDLE = 'border-line text-muted hover:border-[#333333] hover:text-paper';
 
-export default function DualSeriesChart({ primary, overlay, primaryLabel, overlayLabel, overlayLog = true, primaryMarkers = [] }: Props) {
+export default function EventChart({ primary, primaryLabel, eventSets }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<IChartApi | null>(null);
   const primarySeriesRef = useRef<ISeriesApi<'Line'> | null>(null);
-  const [timeframe, setTimeframe] = useState<TimeframeId>('10Y');
+  const [timeframe, setTimeframe] = useState<TimeframeId>('Max');
   const [logScale, setLogScale] = useState(true);
   // Bumped by the reset button to force the effects to re-apply even when the
   // state values are unchanged (manual pan/zoom doesn't touch React state).
   const [resetTick, setResetTick] = useState(0);
+  const [activeSets, setActiveSets] = useState<string[]>(eventSets.map((s) => s.id));
 
   useEffect(() => {
     const el = containerRef.current;
@@ -76,8 +64,7 @@ export default function DualSeriesChart({ primary, overlay, primaryLabel, overla
         vertLines: { color: '#141414' },
         horzLines: { color: '#141414' },
       },
-      rightPriceScale: { borderColor: AXIS.borderColor, visible: !!overlay, mode: overlayLog ? PriceScaleMode.Logarithmic : PriceScaleMode.Normal },
-      leftPriceScale: { borderColor: AXIS.borderColor, visible: true, mode: PriceScaleMode.Logarithmic },
+      rightPriceScale: { borderColor: AXIS.borderColor, mode: PriceScaleMode.Logarithmic },
       timeScale: { borderColor: AXIS.borderColor, timeVisible: false, minBarSpacing: 0.01 },
       crosshair: {
         vertLine: { color: '#333333' },
@@ -90,23 +77,12 @@ export default function DualSeriesChart({ primary, overlay, primaryLabel, overla
     const primarySeries = chart.addLineSeries({
       color: '#f7931a',
       lineWidth: 2,
-      priceScaleId: 'left',
+      priceScaleId: 'right',
       title: primaryLabel,
       priceFormat: { type: 'price', precision: 2, minMove: 0.01 },
     });
     primarySeries.setData(primary);
     primarySeriesRef.current = primarySeries;
-
-    if (overlay) {
-      const overlaySeries = chart.addLineSeries({
-        color: '#7dd3fc',
-        lineWidth: overlayLog ? 2 : 1,
-        priceScaleId: 'right',
-        title: overlayLabel,
-        priceFormat: { type: 'price', precision: 1, minMove: 0.1 },
-      });
-      overlaySeries.setData(overlay);
-    }
 
     chart.timeScale().fitContent();
 
@@ -120,11 +96,10 @@ export default function DualSeriesChart({ primary, overlay, primaryLabel, overla
   }, []);
 
   // Apply timeframe by setting the visible time range; data stays loaded.
-  // Also recenters both price scales (undoes manual vertical stretch).
+  // Also recenters the price scale (undoes manual vertical stretch).
   useEffect(() => {
     const chart = chartRef.current;
     if (!chart || primary.length === 0) return;
-    chart.priceScale('left').applyOptions({ autoScale: true });
     chart.priceScale('right').applyOptions({ autoScale: true });
     const tf = TIMEFRAMES.find((t) => t.id === timeframe);
     if (!tf || tf.years === null) {
@@ -138,55 +113,75 @@ export default function DualSeriesChart({ primary, overlay, primaryLabel, overla
     chart.timeScale().setVisibleRange({ from, to });
   }, [timeframe, primary, resetTick]);
 
-  // Apply price-scale mode to both axes. The overlay stays linear when the
-  // chart config opts out of log (counts and percents distort under log).
+  // Apply price-scale mode.
   useEffect(() => {
     const chart = chartRef.current;
     if (!chart) return;
-    chart.priceScale('left').applyOptions({
-      mode: logScale ? PriceScaleMode.Logarithmic : PriceScaleMode.Normal,
-    });
-    chart.priceScale('right').applyOptions({
-      mode: logScale && overlayLog ? PriceScaleMode.Logarithmic : PriceScaleMode.Normal,
-    });
-  }, [logScale, overlayLog, resetTick]);
+    chart
+      .priceScale('right')
+      .applyOptions({ mode: logScale ? PriceScaleMode.Logarithmic : PriceScaleMode.Normal });
+  }, [logScale, resetTick]);
 
-  // Occurrence markers on the primary series (e.g. earthquakes along BTC).
+  // Draw markers for the toggled event sets on the BTC series.
   useEffect(() => {
     const series = primarySeriesRef.current;
     if (!series) return;
-    const markers: SeriesMarker<Time>[] = primaryMarkers
-      .map((m) => ({
-        time: m.d as Time,
-        position: 'aboveBar' as const,
-        color: m.color,
-        shape: 'circle' as const,
-        ...(m.label ? { text: m.label } : {}),
-      }))
+    if (primary.length === 0) {
+      series.setMarkers([]);
+      return;
+    }
+    const first = primary[0].time;
+    const last = primary[primary.length - 1].time;
+    const markers: SeriesMarker<Time>[] = eventSets
+      .filter((s) => activeSets.includes(s.id))
+      .flatMap((s) =>
+        s.events
+          .filter((e) => e.d >= first && e.d <= last)
+          .map((e) => ({
+            time: e.d as Time,
+            position: 'aboveBar' as const,
+            color: s.color,
+            shape: 'arrowDown' as const,
+            text: e.label,
+          }))
+      )
       .sort((a, b) => (a.time < b.time ? -1 : 1));
     series.setMarkers(markers);
-  }, [primaryMarkers]);
+  }, [activeSets, eventSets, primary]);
+
+  function toggleSet(id: string) {
+    setActiveSets((cur) => (cur.includes(id) ? cur.filter((s) => s !== id) : [...cur, id]));
+  }
 
   function resetView() {
-    setTimeframe('10Y');
+    setTimeframe('Max');
     setLogScale(true);
+    setActiveSets(eventSets.map((s) => s.id));
     setResetTick((t) => t + 1);
   }
 
   return (
     <div>
       <div className="mb-2 flex flex-wrap items-center justify-between gap-4">
-        <div className="flex gap-6 font-mono text-xs text-muted">
-          <span>
-            <span className="mr-1 inline-block h-2 w-2 rounded-full bg-[#f7931a]" />
-            {primaryLabel} (left)
-          </span>
-          {overlay && (
-            <span>
-              <span className="mr-1 inline-block h-2 w-2 rounded-full bg-[#7dd3fc]" />
-              {overlayLabel} (right)
-            </span>
-          )}
+        <div className="flex flex-wrap items-center gap-2">
+          {eventSets.map((s) => {
+            const active = activeSets.includes(s.id);
+            return (
+              <button
+                key={s.id}
+                type="button"
+                onClick={() => toggleSet(s.id)}
+                className={`${CONTROL_BTN} ${active ? CONTROL_ACTIVE : CONTROL_IDLE}`}
+                title={`Overlay ${s.name} on the chart`}
+              >
+                <span
+                  className="mr-1 inline-block h-2 w-2 rounded-full"
+                  style={{ backgroundColor: s.color }}
+                />
+                {s.name}
+              </button>
+            );
+          })}
         </div>
         <div className="flex items-center gap-4">
           <div className="flex gap-1">
@@ -213,13 +208,13 @@ export default function DualSeriesChart({ primary, overlay, primaryLabel, overla
             type="button"
             onClick={resetView}
             className={`${CONTROL_BTN} ${CONTROL_IDLE}`}
-            title="Reset to the default view (10Y, log scale, centered)"
+            title="Reset to the default view (Max, log scale, all events on)"
           >
             reset
           </button>
         </div>
       </div>
-      <div ref={containerRef} className="h-[420px] w-full" data-testid="dual-series-chart" />
+      <div ref={containerRef} className="h-[480px] w-full" data-testid="event-chart" />
     </div>
   );
 }
