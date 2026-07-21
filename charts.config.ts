@@ -3,6 +3,7 @@ import type { ChartConfig } from '@/lib/types';
 export const charts: ChartConfig[] = [
   {
     slug: 'btc-vs-luxury-watches',
+    category: 'goods',
     title: 'BTC vs Luxury Watches',
     subtitle: 'Bitcoin against an equal-weighted basket of LVMH, Richemont and Swatch.',
     primarySeriesId: 'btc-usd',
@@ -13,6 +14,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-ferrari',
+    category: 'goods',
     title: 'BTC vs Ferrari',
     subtitle: 'Bitcoin against Ferrari N.V. (RACE), purveyor of the official car of imaginary wealth.',
     primarySeriesId: 'btc-usd',
@@ -23,6 +25,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-live-cattle',
+    category: 'goods',
     title: 'BTC vs Live Cattle',
     subtitle: 'Bitcoin against front-month live cattle futures (LE=F), in cents per pound.',
     primarySeriesId: 'btc-usd',
@@ -33,6 +36,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-gamestop',
+    category: 'goods',
     title: 'BTC vs GameStop',
     subtitle: 'Bitcoin against GameStop (GME). The two assets Wall Street hates, one chart.',
     primarySeriesId: 'btc-usd',
@@ -43,6 +47,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-earthquakes',
+    category: 'nature',
     title: 'BTC vs Earthquakes',
     subtitle: 'Bitcoin against the 7-day count of magnitude 6+ earthquakes worldwide (USGS).',
     primarySeriesId: 'btc-usd',
@@ -54,6 +59,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-sunspots',
+    category: 'nature',
     title: 'BTC vs Sunspots',
     subtitle: 'Bitcoin against the daily sunspot number (SILSO, Royal Observatory of Belgium).',
     primarySeriesId: 'btc-usd',
@@ -65,6 +71,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-moon',
+    category: 'nature',
     title: 'BTC vs the Moon',
     subtitle: 'Bitcoin against lunar illumination, computed from the mean synodic month.',
     primarySeriesId: 'btc-usd',
@@ -76,6 +83,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-hurricanes',
+    category: 'nature',
     title: 'BTC vs Hurricanes',
     subtitle: 'Bitcoin against major Atlantic hurricanes (NOAA HURDAT2), at peak intensity.',
     primarySeriesId: 'btc-usd',
@@ -87,6 +95,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-temperature',
+    category: 'nature',
     title: 'BTC vs Temperature',
     subtitle: 'Bitcoin against the daily maximum temperature in Phoenix, Arizona (Open-Meteo ERA5).',
     primarySeriesId: 'btc-usd',

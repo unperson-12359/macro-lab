@@ -2,8 +2,6 @@ import { loadCharts, loadSeries } from './data';
 import { correlationOnReturns, toChartPoints, verdictFromR } from './stats';
 import type { ChartConfig, ChartPoint, Verdict } from './types';
 
-export const CHARTS_PAGE_SIZE = 6;
-
 export interface ChartCardData {
   chart: ChartConfig;
   r: number;
@@ -37,12 +35,4 @@ export function buildChartCards(): ChartCardData[] {
       lastUpdated: primary.points[primary.points.length - 1]?.d ?? 'unknown',
     };
   });
-}
-
-export function paginate<T>(items: T[], page: number, size = CHARTS_PAGE_SIZE): T[] {
-  return items.slice((page - 1) * size, page * size);
-}
-
-export function totalPages(count: number, size = CHARTS_PAGE_SIZE): number {
-  return Math.max(1, Math.ceil(count / size));
 }
