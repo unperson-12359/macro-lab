@@ -51,19 +51,19 @@ export default function ChartPage({ params }: Props) {
       <div className="mb-6 grid grid-cols-2 gap-4 font-mono text-xs text-muted sm:grid-cols-4">
         <div>
           <p className="uppercase tracking-wider">correlation r</p>
-          <p className="mt-1 text-base text-paper numbers">{r.toFixed(3)}</p>
+          <p className="mt-1 text-sm text-paper numbers">{r.toFixed(3)}</p>
         </div>
         <div>
           <p className="uppercase tracking-wider">overlap days</p>
-          <p className="mt-1 text-base text-paper numbers">{n}</p>
+          <p className="mt-1 text-sm text-paper numbers">{n}</p>
         </div>
         <div>
           <p className="uppercase tracking-wider">{primary.name} through</p>
-          <p className="mt-1 text-base text-paper numbers">{primaryLast}</p>
+          <p className="mt-1 text-sm text-paper numbers">{primaryLast}</p>
         </div>
         <div>
           <p className="uppercase tracking-wider">{overlay.name} through</p>
-          <p className="mt-1 text-base text-paper numbers">{overlayLast}</p>
+          <p className="mt-1 text-sm text-paper numbers">{overlayLast}</p>
         </div>
       </div>
 

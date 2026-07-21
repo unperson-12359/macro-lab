@@ -38,7 +38,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="mt-20 sm:mt-28">
+      <section className="mt-16 sm:mt-20">
         <div className="flex items-baseline justify-between">
           <h2 className="font-mono text-xs uppercase tracking-widest text-muted">
             Latest readings
@@ -52,7 +52,7 @@ export default function Home() {
             <Link
               key={chart.slug}
               href={`/charts/${chart.slug}`}
-              className="group flex flex-wrap items-baseline gap-x-6 gap-y-1 border-t border-line px-2 py-5 transition-colors duration-150 hover:bg-[#111111]"
+              className="group flex flex-wrap items-baseline gap-x-6 gap-y-1 border-t border-line px-2 py-4 transition-colors duration-150 hover:bg-[#111111]"
             >
               <span className="font-mono text-xs text-muted numbers">
                 {String(i + 1).padStart(2, '0')}
@@ -79,13 +79,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-20 sm:mt-28">
+      <section className="mt-16 sm:mt-20">
         <h2 className="font-mono text-xs uppercase tracking-widest text-muted">Method</h2>
         <div className="mt-4 border-b border-line">
           {METHOD.map((s) => (
             <div
               key={s.n}
-              className="flex items-baseline gap-6 border-t border-line px-2 py-4"
+              className="flex items-baseline gap-6 border-t border-line px-2 py-3"
             >
               <span className="font-mono text-xs text-[#f7931a] numbers">{s.n}</span>
               <p className="text-sm text-muted">{s.text}</p>
@@ -94,7 +94,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16 pb-8 sm:mt-20">
+      <section className="mt-12 pb-6 sm:mt-16">
         <div className="flex gap-8 text-sm">
           <Link href="/charts" className="group text-paper">
             <span className="border-b border-line pb-1 transition-colors group-hover:border-[#f7931a]">

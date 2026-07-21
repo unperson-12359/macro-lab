@@ -32,7 +32,7 @@ export default function ChartsPageN({ params }: Props) {
           page {page} of {pages}
         </p>
       </div>
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {paginate(cards, page).map(({ chart, verdict, points, lastUpdated }) => (
           <ChartCard
             key={chart.slug}

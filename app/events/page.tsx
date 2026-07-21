@@ -37,7 +37,7 @@ export default function EventsPage() {
           const tops = stats.rows.filter((r) => r.nearTop).length;
           const bottoms = stats.rows.filter((r) => r.nearBottom).length;
           return (
-            <div key={set.id} className="rounded-lg border border-line bg-[#111111] p-4">
+            <div key={set.id} className="rounded-lg border border-line bg-[#111111] p-3">
               <p className="text-sm">
                 <span
                   className="mr-2 inline-block h-2 w-2 rounded-full"
