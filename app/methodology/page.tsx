@@ -90,8 +90,9 @@ export default function Methodology() {
       <section className="mt-8">
         <h2 className="text-lg font-semibold">How the charts are drawn</h2>
         <p className="mt-2 text-sm text-muted">
-          Each chart declares its own display rules. Earthquakes are drawn as M7+/M8+ markers
-          along the BTC price, while the correlation runs against a 7-day rolling M6+ count (raw
+          Each chart declares its own display rules. Earthquakes and hurricanes are drawn as
+          markers along the BTC price (M7+/M8+ quakes, category 3–5 hurricanes at peak intensity),
+          while their correlations run against 7-day rolling counts (raw
           daily counts are mostly zeros, which would quietly shrink the return overlap).
           Count and percentage overlays — quakes, sunspots, moon — stay on a linear axis even
           when log scale is on, because zeros and logarithms do not mix. This is all

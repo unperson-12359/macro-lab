@@ -1,30 +1,13 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import fs from 'node:fs';
-import path from 'node:path';
-import DualSeriesChart, { type PrimaryMarker } from '@/components/DualSeriesChart';
+import DualSeriesChart from '@/components/DualSeriesChart';
 import VerdictBadge from '@/components/VerdictBadge';
 import { loadCharts, loadSeries } from '@/lib/data';
+import { loadMarkersForChart } from '@/lib/markers';
 import { correlationOnReturns, movingAverage, toChartPoints, verdictFromR } from '@/lib/stats';
 
 interface Props {
   params: { slug: string };
-}
-
-interface QuakeEvent {
-  d: string;
-  mag: number;
-}
-
-function loadQuakeMarkers(): PrimaryMarker[] {
-  const file = path.join(process.cwd(), 'data', 'events-earthquakes.json');
-  if (!fs.existsSync(file)) return [];
-  const events = JSON.parse(fs.readFileSync(file, 'utf8')) as QuakeEvent[];
-  return events.map((e) => ({
-    d: e.d,
-    color: e.mag >= 8 ? '#ef4444' : '#fbbf24',
-    ...(e.mag >= 8 ? { label: `M${e.mag.toFixed(1)}` } : {}),
-  }));
 }
 
 export function generateStaticParams() {
@@ -48,6 +31,7 @@ export default function ChartPage({ params }: Props) {
   const overlayDisplay = smaDays ? movingAverage(overlay.points, smaDays) : overlay.points;
   const overlayLabel = smaDays ? `${overlay.name} · ${smaDays}-day avg` : overlay.name;
   const markerMode = chart.display?.overlayMode === 'markers';
+  const markerData = markerMode ? loadMarkersForChart(chart.slug) : null;
 
   const all = loadCharts();
   const idx = all.findIndex((c) => c.slug === chart.slug);
@@ -89,16 +73,14 @@ export default function ChartPage({ params }: Props) {
         overlay={markerMode ? undefined : toChartPoints(overlayDisplay)}
         overlayLabel={overlayLabel}
         overlayLog={chart.display?.overlayLog ?? true}
-        primaryMarkers={markerMode ? loadQuakeMarkers() : undefined}
+        primaryMarkers={markerData?.markers}
       />
 
-      {markerMode && (
+      {markerData && (
         <p className="mt-2 font-mono text-xs text-muted">
           <span className="mr-1 inline-block h-2 w-2 rounded-full bg-[#fbbf24]" />
-          M7+ earthquake ·{' '}
           <span className="mr-1 inline-block h-2 w-2 rounded-full bg-[#ef4444]" />
-          M8+ (labeled) — occurrences plotted along the BTC price; correlation above is vs the
-          7-day M6+ count.
+          {markerData.legend}
         </p>
       )}
 

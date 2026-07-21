@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { loadCharts, loadSeries, loadStatus } from '@/lib/data';
-import { correlationOnReturns, verdictFromR } from '@/lib/stats';
+import { buildChartCards } from '@/lib/cards';
+import { loadStatus } from '@/lib/data';
 import type { Verdict } from '@/lib/types';
 
 const VERDICT_DOT: Record<Verdict, string> = {
@@ -15,14 +15,11 @@ const METHOD = [
   { n: '03', text: 'Print the verdict next to the chart. Especially when it is nothing.' },
 ];
 
+const HOMEPAGE_READINGS = 6;
+
 export default function Home() {
   const status = loadStatus();
-  const readings = loadCharts().map((chart) => {
-    const primary = loadSeries(chart.primarySeriesId);
-    const overlay = loadSeries(chart.overlaySeriesId);
-    const { r } = correlationOnReturns(primary.points, overlay.points);
-    return { chart, r, verdict: verdictFromR(r) };
-  });
+  const readings = buildChartCards().slice(0, HOMEPAGE_READINGS);
 
   return (
     <div>

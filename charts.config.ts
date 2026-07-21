@@ -74,4 +74,15 @@ export const charts: ChartConfig[] = [
       'The overlay is lunar illumination — 0% at new moon, 100% at full — computed locally from the mean synodic month. No API is involved; the astronomy is accurate to a few hours, which is plenty for folklore. Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. Full-moon trading lore has circulated for decades without anyone checking; this chart is the checking. The oscillation is exact; the Bitcoin part is not.',
     display: { overlayLog: false },
   },
+  {
+    slug: 'btc-vs-hurricanes',
+    title: 'BTC vs Hurricanes',
+    subtitle: 'Bitcoin against major Atlantic hurricanes (NOAA HURDAT2), at peak intensity.',
+    primarySeriesId: 'btc-usd',
+    overlaySeriesId: 'hurricane-days',
+    oneLiner: 'Does the market weather the weather? The tropics decline to comment.',
+    explanation:
+      'Each dot is a major Atlantic hurricane at its peak-intensity day from the NOAA HURDAT2 database — amber for category 3, red and named for category 4–5 — plotted along the BTC price. The correlation is computed against the 7-day count of active hurricanes, because raw daily counts are zero all winter. HURDAT2 currently runs through the 2024 season, so recent dots appear only after NOAA updates the file. Hurricane season and bull markets both peak in autumn; whether that sentence means anything is exactly what the number above is for.',
+    display: { overlayMode: 'markers' },
+  },
 ];

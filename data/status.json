@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T21:46:06.608Z",
+  "updatedAt": "2026-07-21T22:32:24.785Z",
   "sources": {
     "btc-usd": {
       "ok": true,
@@ -75,6 +75,13 @@
       "ok": true,
       "source": "usgs",
       "sourceUrl": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=6",
+      "points": 5817,
+      "lastPoint": "2026-07-21"
+    },
+    "hurricane-days": {
+      "ok": true,
+      "source": "noaa-hurdat2",
+      "sourceUrl": "https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2024-040425.txt",
       "points": 5817,
       "lastPoint": "2026-07-21"
     }
