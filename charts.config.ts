@@ -85,4 +85,15 @@ export const charts: ChartConfig[] = [
       'Each dot is a major Atlantic hurricane at its peak-intensity day from the NOAA HURDAT2 database — amber for category 3, red and named for category 4–5 — plotted along the BTC price. The correlation is computed against the 7-day count of active hurricanes, because raw daily counts are zero all winter. HURDAT2 currently runs through the 2024 season, so recent dots appear only after NOAA updates the file. Hurricane season and bull markets both peak in autumn; whether that sentence means anything is exactly what the number above is for.',
     display: { overlayMode: 'markers' },
   },
+  {
+    slug: 'btc-vs-temperature',
+    title: 'BTC vs Temperature',
+    subtitle: 'Bitcoin against the daily maximum temperature in Phoenix, Arizona (Open-Meteo ERA5).',
+    primarySeriesId: 'btc-usd',
+    overlaySeriesId: 'phoenix-tmax',
+    oneLiner: 'Both are accused of boiling the planet. Only one of them tracks summer.',
+    display: { overlayLog: false },
+    explanation:
+      'The overlay is the daily maximum air temperature in Phoenix, Arizona, from the Open-Meteo ERA5 reanalysis archive — chosen because if heatwaves are going to show up anywhere, it is there. Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. The theory being tested is roughly "risk appetite is seasonal", which the number above evaluates without mercy. The summer spikes are weather; the other line is weather of a different kind.',
+  },
 ];

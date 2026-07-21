@@ -94,8 +94,8 @@ export default function Methodology() {
           markers along the BTC price (M7+/M8+ quakes, category 3–5 hurricanes at peak intensity),
           while their correlations run against 7-day rolling counts (raw
           daily counts are mostly zeros, which would quietly shrink the return overlap).
-          Count and percentage overlays — quakes, sunspots, moon — stay on a linear axis even
-          when log scale is on, because zeros and logarithms do not mix. This is all
+          Count and percentage overlays — quakes, sunspots, moon, temperature — stay on a
+          linear axis even when log scale is on, because zeros and logarithms do not mix. This is all
           display-only: every statistic on the site is computed from the raw daily files,
           because smoothing before correlating would manufacture agreement that is not there.
         </p>
