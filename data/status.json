@@ -1,0 +1,12 @@
+{
+  "updatedAt": "2026-07-21T17:06:08.458Z",
+  "sources": {
+    "btc-usd": {
+      "ok": true,
+      "source": "binance",
+      "sourceUrl": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d",
+      "points": 3260,
+      "lastPoint": "2026-07-20"
+    }
+  }
+}
