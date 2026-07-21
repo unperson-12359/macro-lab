@@ -30,9 +30,9 @@ export default function Methodology() {
           blockchain.info backfill (2010-08 → 2017). Everything else is listed below, generated
           from the actual data files at build time — add a chart and it lists itself.
         </p>
-        <div className="mt-4 border-b border-line">
+        <div className="mt-5 space-y-6">
           {chartSeries.map(({ chart, series }) => (
-            <div key={chart.slug} className="border-t border-line px-2 py-4">
+            <div key={chart.slug}>
               <p className="text-sm font-medium">{chart.title}</p>
               {series.map((s) => (
                 <div
@@ -90,27 +90,27 @@ export default function Methodology() {
       <section className="mt-8">
         <h2 className="text-lg font-semibold">How the charts are drawn</h2>
         <p className="mt-2 text-sm text-muted">
-          Each chart declares its own display rules. Earthquakes and hurricanes are drawn as
-          markers along the BTC price (M7+/M8+ quakes, category 3–5 hurricanes at peak intensity),
-          while their correlations run against 7-day rolling counts (raw
-          daily counts are mostly zeros, which would quietly shrink the return overlap).
-          Count and percentage overlays — quakes, sunspots, moon, temperature — stay on a
-          linear axis even when log scale is on, because zeros and logarithms do not mix. This is all
-          display-only: every statistic on the site is computed from the raw daily files,
-          because smoothing before correlating would manufacture agreement that is not there.
+          Each chart declares its own display rules. Some charts draw individual occurrences as
+          markers along the BTC price, while their correlations run against a rolling count of
+          those occurrences (raw daily counts are mostly zeros, which would quietly shrink the
+          return overlap). Count and percentage overlays stay on a linear axis even when log
+          scale is on, because zeros and logarithms do not mix. This is all display-only: every
+          statistic on the site is computed from the raw daily files, because smoothing before
+          correlating would manufacture agreement that is not there.
         </p>
       </section>
 
       <section className="mt-8">
         <h2 className="text-lg font-semibold">Event markers</h2>
         <p className="mt-2 text-sm text-muted">
-          The <code>/events</code> page overlays static event dates — World Cup finals, US
-          presidential elections and Summer Olympics opening ceremonies — on the BTC price. These are historical facts, not data feeds; there is
-          nothing to maintain. For each event we report two honest numbers: whether BTC closed
-          within 5% of its trailing 180-day high (a &ldquo;top&rdquo;) or low (a
-          &ldquo;bottom&rdquo;) on the event day, and the median 90-day forward return after events
-          — each compared against the base rate or median across all days. With four or five events
-          per set, no conclusion is statistically possible, and the strips say so.
+          The <code>/events</code> page overlays static event dates — sports finals, elections,
+          ceremonies, whatever the config file currently holds — on the BTC price. These are
+          historical facts, not data feeds; there is nothing to maintain. For each event we report
+          two honest numbers: whether BTC closed within 5% of its trailing 180-day high (a
+          &ldquo;top&rdquo;) or low (a &ldquo;bottom&rdquo;) on the event day, and the median 90-day
+          forward return after events — each compared against the base rate or median across all
+          days. With a handful of events per set, no conclusion is statistically possible, and the
+          strips say so.
         </p>
       </section>
 

@@ -91,12 +91,12 @@ export default function ChartPage({ params }: Props) {
         usually a coincidence with good marketing. Observation, not alpha.
       </p>
 
-      <section className="mt-6 max-w-2xl border-t border-line pt-4">
+      <section className="mt-8 max-w-2xl">
         <h2 className="text-sm font-semibold">About this pairing</h2>
         <p className="mt-2 text-sm text-muted">{chart.explanation}</p>
       </section>
 
-      <nav aria-label="More charts" className="mt-12 flex flex-col gap-3 border-t border-line pt-5 sm:flex-row sm:items-baseline sm:justify-between">
+      <nav aria-label="More charts" className="mt-14 flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
         {prev ? (
           <Link rel="prev" href={`/charts/${prev.slug}`} className="group text-sm text-muted">
             <span className="font-mono text-xs uppercase tracking-widest">Previous</span>

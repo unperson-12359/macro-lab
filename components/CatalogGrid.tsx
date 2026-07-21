@@ -133,7 +133,7 @@ export default function CatalogGrid({ cards }: { cards: ChartCardData[] }) {
       )}
 
       {pages > 1 && (
-        <nav aria-label="Pagination" className="mt-10 flex items-center justify-between border-t border-line pt-5 font-mono text-sm">
+        <nav aria-label="Pagination" className="mt-10 flex items-center justify-between font-mono text-sm">
           {safePage > 1 ? (
             <button type="button" onClick={() => setParam('page', String(safePage - 1))} className="group text-muted hover:text-paper">
               <span className="inline-block transition-transform duration-150 group-hover:-translate-x-1">←</span> prev

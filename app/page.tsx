@@ -23,22 +23,22 @@ export default function Home() {
 
   return (
     <div>
-      <section className="pt-14 sm:pt-24">
+      <section className="pt-6 sm:pt-10">
         <p className="font-mono text-xs uppercase tracking-widest text-muted">
           Macro Lab — observation, not alpha
         </p>
-        <h1 className="mt-6 max-w-4xl text-[clamp(2.75rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-tight">
+        <h1 className="mt-4 max-w-4xl text-[clamp(2.75rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-tight">
           Unconventional Bitcoin indicators.
           <span className="block text-muted">Honestly labeled.</span>
         </h1>
-        <p className="mt-8 max-w-md text-base text-muted">
+        <p className="mt-5 max-w-md text-base text-muted">
           We pair BTC with things it probably shouldn&rsquo;t predict, compute the actual
           correlation, and print the verdict next to the chart — even when the verdict is that
           there is nothing there.
         </p>
       </section>
 
-      <section className="mt-16 sm:mt-20">
+      <section className="mt-10 sm:mt-16">
         <div className="flex items-baseline justify-between">
           <h2 className="font-mono text-xs uppercase tracking-widest text-muted">
             Latest readings
@@ -47,12 +47,12 @@ export default function Home() {
             data through {status.updatedAt.slice(0, 10)}
           </p>
         </div>
-        <div className="mt-4 border-b border-line">
+        <div className="mt-3">
           {readings.map(({ chart, r, verdict }, i) => (
             <Link
               key={chart.slug}
               href={`/charts/${chart.slug}`}
-              className="group flex flex-wrap items-baseline gap-x-6 gap-y-1 border-t border-line px-2 py-4 transition-colors duration-150 hover:bg-[#111111]"
+              className="group flex flex-wrap items-baseline gap-x-6 gap-y-1 rounded px-2 py-3 transition-colors duration-150 hover:bg-[#111111]"
             >
               <span className="font-mono text-xs text-muted numbers">
                 {String(i + 1).padStart(2, '0')}
@@ -79,14 +79,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16 sm:mt-20">
+      <section className="mt-10 sm:mt-14">
         <h2 className="font-mono text-xs uppercase tracking-widest text-muted">Method</h2>
-        <div className="mt-4 border-b border-line">
+        <div className="mt-3 space-y-1">
           {METHOD.map((s) => (
-            <div
-              key={s.n}
-              className="flex items-baseline gap-6 border-t border-line px-2 py-3"
-            >
+            <div key={s.n} className="flex items-baseline gap-6 px-2 py-2">
               <span className="font-mono text-xs text-[#f7931a] numbers">{s.n}</span>
               <p className="text-sm text-muted">{s.text}</p>
             </div>
@@ -94,20 +91,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-12 pb-6 sm:mt-16">
+      <section className="mt-10 pb-4">
         <div className="flex gap-8 text-sm">
-          <Link href="/charts" className="group text-paper">
-            <span className="border-b border-line pb-1 transition-colors group-hover:border-[#f7931a]">
-              Browse the full index
-            </span>{' '}
+          <Link href="/charts" className="group text-paper transition-colors hover:text-[#f7931a]">
+            Browse the full index{' '}
             <span className="inline-block transition-transform duration-150 group-hover:translate-x-1">
               →
             </span>
           </Link>
-          <Link href="/methodology" className="group text-muted">
-            <span className="border-b border-line pb-1 transition-colors group-hover:border-paper">
-              Methodology
-            </span>{' '}
+          <Link href="/methodology" className="group text-muted transition-colors hover:text-paper">
+            Methodology{' '}
             <span className="inline-block transition-transform duration-150 group-hover:translate-x-1">
               →
             </span>
