@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import DualSeriesChart from '@/components/DualSeriesChart';
 import OscillatorChart from '@/components/OscillatorChart';
-import VerdictBadge from '@/components/VerdictBadge';
 import { loadCharts, loadSeries } from '@/lib/data';
 import { loadMarkersForChart } from '@/lib/markers';
 import {
@@ -11,7 +10,6 @@ import {
   rollingCorrelation,
   seasonalAnomaly,
   toChartPoints,
-  verdictFromR,
 } from '@/lib/stats';
 
 interface Props {
@@ -29,7 +27,6 @@ export default function ChartPage({ params }: Props) {
   const primary = loadSeries(chart.primarySeriesId);
   const overlay = loadSeries(chart.overlaySeriesId);
   const { r, n } = correlationOnReturns(primary.points, overlay.points);
-  const verdict = verdictFromR(r);
 
   const primaryLast = primary.points[primary.points.length - 1]?.d ?? '—';
   const overlayLast = overlay.points[overlay.points.length - 1]?.d ?? '—';
@@ -54,12 +51,9 @@ export default function ChartPage({ params }: Props) {
 
   return (
     <div>
-      <div className="mb-6 flex items-start justify-between gap-4">
-        <div>
-          <h1 className="font-display text-2xl">{chart.title}</h1>
-          <p className="mt-1 text-sm text-muted">{chart.subtitle}</p>
-        </div>
-        <VerdictBadge verdict={verdict} />
+      <div className="mb-6">
+        <h1 className="font-display text-2xl">{chart.title}</h1>
+        <p className="mt-1 text-sm text-muted">{chart.subtitle}</p>
       </div>
 
       <div className="mb-6 grid grid-cols-2 gap-4 rounded-2xl border border-line bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-5 sm:grid-cols-4">
