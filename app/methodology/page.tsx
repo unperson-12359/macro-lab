@@ -1,21 +1,10 @@
 import type { Metadata } from 'next';
-import { loadCharts, loadSeries } from '@/lib/data';
-import type { Series } from '@/lib/types';
 
 export const metadata: Metadata = {
   title: 'Methodology — Macro Lab',
 };
 
-function lastDate(series: Series): string {
-  return series.points[series.points.length - 1]?.d ?? '—';
-}
-
 export default function Methodology() {
-  const chartSeries = loadCharts().map((chart) => ({
-    chart,
-    series: [loadSeries(chart.primarySeriesId), loadSeries(chart.overlaySeriesId)],
-  }));
-
   return (
     <div className="max-w-2xl">
       <h1 className="font-display text-2xl">Methodology</h1>
@@ -23,41 +12,23 @@ export default function Methodology() {
         How the numbers on this site are produced, and why you shouldn&rsquo;t trade on them.
       </p>
 
+      <hr className="divider-glow mt-8" />
+
       <section className="mt-8">
-        <h2 className="font-display text-lg">Data sources</h2>
+        <h2 className="font-display text-lg">Data</h2>
         <p className="mt-2 text-sm text-muted">
-          Bitcoin itself blends Binance daily closes (2017-08-17 onward) with a one-time
-          blockchain.info backfill (2010-08 → 2017). Everything else is listed below, generated
-          from the actual data files at build time — add a chart and it lists itself.
-        </p>
-        <div className="mt-5 space-y-6">
-          {chartSeries.map(({ chart, series }) => (
-            <div key={chart.slug}>
-              <p className="text-sm font-medium">{chart.title}</p>
-              {series.map((s) => (
-                <div
-                  key={s.id}
-                  className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-0.5 text-xs text-muted"
-                >
-                  <span className="text-paper">{s.name}</span>
-                  <span>{s.source}</span>
-                  <span>
-                    {s.cadence} · {s.unit}
-                  </span>
-                  <span className="numbers font-mono">
-                    {s.points.length.toLocaleString('en-US')} points · through {lastDate(s)}
-                  </span>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-xs text-muted">
-          No API keys, no adjustments beyond what the venues publish, no fabricated rows: if a
-          fetch fails, the stale file stays and the failure is recorded in{' '}
-          <code>data/status.json</code>.
+          Everything comes from free public endpoints — exchange APIs, market-data APIs, and
+          government or scientific agencies (USGS, NOAA, SILSO and the like). No API keys, no
+          scraping, daily cadence, merged latest-wins into plain JSON files checked into the
+          repo. If a fetch fails, the stale file stays and the failure is recorded in{' '}
+          <code>data/status.json</code> — nothing is ever fabricated to fill a gap. Bitcoin
+          itself blends exchange daily closes (2017 onward) with a one-time public backfill
+          reaching 2010. What each chart pairs with what is documented on the chart&rsquo;s own
+          page, not here.
         </p>
       </section>
+
+      <hr className="divider-glow mt-8" />
 
       <section className="mt-8">
         <h2 className="font-display text-lg">Correlation on daily returns</h2>
@@ -68,6 +39,8 @@ export default function Methodology() {
           we compute the Pearson correlation coefficient r over those overlapping returns.
         </p>
       </section>
+
+      <hr className="divider-glow mt-8" />
 
       <section className="mt-8">
         <h2 className="font-display text-lg">The verdicts</h2>
@@ -87,6 +60,8 @@ export default function Methodology() {
         </ul>
       </section>
 
+      <hr className="divider-glow mt-8" />
+
       <section className="mt-8">
         <h2 className="font-display text-lg">How the charts are drawn</h2>
         <p className="mt-2 text-sm text-muted">
@@ -99,6 +74,8 @@ export default function Methodology() {
           correlating would manufacture agreement that is not there.
         </p>
       </section>
+
+      <hr className="divider-glow mt-8" />
 
       <section className="mt-8">
         <h2 className="font-display text-lg">Event markers</h2>
@@ -113,6 +90,8 @@ export default function Methodology() {
           strips say so.
         </p>
       </section>
+
+      <hr className="divider-glow mt-8" />
 
       <section className="mt-8">
         <h2 className="font-display text-lg">Honest labeling</h2>
