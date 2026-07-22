@@ -23,8 +23,8 @@ export interface ChartConfig {
   oneLiner: string;
   /** 2–4 sentences shown in the "About this pairing" section on the detail page. */
   explanation: string;
-  /** Catalog grouping: things humans buy vs things the universe does. */
-  category: 'goods' | 'nature';
+  /** Catalog grouping: goods = things humans buy, markets = financial instruments, nature = things the universe does. */
+  category: 'goods' | 'markets' | 'nature';
   /** Display-only hints; statistics always use the raw series. */
   display?: {
     /** moving-average window (days) for drawing the overlay */

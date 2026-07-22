@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T22:49:51.945Z",
+  "updatedAt": "2026-07-22T19:12:22.170Z",
   "sources": {
     "btc-usd": {
       "ok": true,
@@ -40,22 +40,22 @@
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/RACE?interval=1d",
-      "points": 2701,
-      "lastPoint": "2026-07-21"
+      "points": 2702,
+      "lastPoint": "2026-07-22"
     },
     "live-cattle": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/LE=F?interval=1d",
-      "points": 6362,
-      "lastPoint": "2026-07-21"
+      "points": 6363,
+      "lastPoint": "2026-07-22"
     },
     "gamestop-gme": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GME?interval=1d",
-      "points": 6147,
-      "lastPoint": "2026-07-21"
+      "points": 6148,
+      "lastPoint": "2026-07-22"
     },
     "moon-illumination": {
       "ok": true,
@@ -91,6 +91,27 @@
       "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=33.45&longitude=-112.07&daily=temperature_2m_max",
       "points": 5817,
       "lastPoint": "2026-07-21"
+    },
+    "nasdaq-100": {
+      "ok": true,
+      "source": "yahoo",
+      "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/^NDX?interval=1d",
+      "points": 10280,
+      "lastPoint": "2026-07-22"
+    },
+    "dollar-index": {
+      "ok": true,
+      "source": "yahoo",
+      "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?interval=1d",
+      "points": 14105,
+      "lastPoint": "2026-07-22"
+    },
+    "gold-futures": {
+      "ok": true,
+      "source": "yahoo",
+      "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GC=F?interval=1d",
+      "points": 6496,
+      "lastPoint": "2026-07-22"
     }
   }
 }

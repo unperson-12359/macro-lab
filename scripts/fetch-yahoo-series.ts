@@ -26,6 +26,9 @@ const TICKERS = [
   { id: 'ferrari-race', symbol: 'RACE', name: 'Ferrari (RACE)', unit: 'USD' },
   { id: 'live-cattle', symbol: 'LE=F', name: 'Live cattle futures (LE=F)', unit: 'cents per lb' },
   { id: 'gamestop-gme', symbol: 'GME', name: 'GameStop (GME)', unit: 'USD' },
+  { id: 'nasdaq-100', symbol: '^NDX', name: 'Nasdaq 100 (^NDX)', unit: 'index points' },
+  { id: 'dollar-index', symbol: 'DX-Y.NYB', name: 'US dollar index (DXY)', unit: 'index points' },
+  { id: 'gold-futures', symbol: 'GC=F', name: 'Gold futures (GC=F)', unit: 'USD per oz' },
 ] as const;
 
 async function main(): Promise<void> {

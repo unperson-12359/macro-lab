@@ -15,8 +15,26 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Macro Lab',
+  metadataBase: new URL('https://unperson-12359.github.io/macro-lab'),
+  title: {
+    default: 'Macro Lab',
+    template: '%s — Macro Lab',
+  },
   description: 'Unconventional Bitcoin indicators. Honestly labeled.',
+  openGraph: {
+    title: 'Macro Lab',
+    description: 'Unconventional Bitcoin indicators. Honestly labeled.',
+    url: 'https://unperson-12359.github.io/macro-lab',
+    siteName: 'Macro Lab',
+    images: [{ url: '/macro-lab/og.png', width: 1200, height: 630 }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Macro Lab',
+    description: 'Unconventional Bitcoin indicators. Honestly labeled.',
+    images: ['/macro-lab/og.png'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; background: #0a0a0a; color: #ededed;
+    font-family: 'Inter', sans-serif; position: relative; overflow: hidden;
+  }
+  .glow {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 55% at 50% -10%, rgba(247,147,26,0.16), transparent 70%);
+  }
+  .inner { position: relative; padding: 72px 80px; height: 100%; display: flex; flex-direction: column; }
+  .pill {
+    display: inline-block; align-self: flex-start;
+    border: 1.5px solid rgba(247,147,26,0.6); color: #f7931a;
+    border-radius: 999px; padding: 10px 26px; font-size: 22px; font-weight: 500;
+    font-family: ui-monospace, monospace; letter-spacing: 2px;
+  }
+  h1 {
+    font-family: 'Archivo Black', sans-serif; font-size: 96px; line-height: 1.02;
+    margin-top: auto; letter-spacing: -1px;
+  }
+  h1 span {
+    background: linear-gradient(90deg, #f7931a, #8a8a8a);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  p.sub { margin-top: 24px; font-size: 26px; color: #8a8a8a; max-width: 700px; }
+  .foot {
+    margin-top: 48px; font-family: ui-monospace, monospace; font-size: 18px;
+    color: #8a8a8a; letter-spacing: 3px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="inner">
+    <span class="pill">MACRO LAB</span>
+    <h1>Unconventional Bitcoin<br/>indicators. <span>Honestly labeled.</span></h1>
+    <p class="sub">We pair BTC with things it probably shouldn't predict, compute the correlation, and print the verdict.</p>
+    <div class="foot">observation, not alpha</div>
+  </div>
+</body>
+</html>

@@ -8,7 +8,7 @@ import type { Verdict } from '@/lib/types';
 
 const PAGE_SIZE = 6;
 
-type Category = 'all' | 'goods' | 'nature';
+type Category = 'all' | 'goods' | 'markets' | 'nature';
 type Sort = 'curated' | 'r-desc' | 'r-asc' | 'name';
 type VerdictFilter = 'all' | Verdict;
 
@@ -31,7 +31,7 @@ export default function CatalogGrid({ cards }: { cards: ChartCardData[] }) {
   const router = useRouter();
   const params = useSearchParams();
 
-  const category = valid(params.get('cat'), ['all', 'goods', 'nature'] as const, 'all');
+  const category = valid(params.get('cat'), ['all', 'goods', 'markets', 'nature'] as const, 'all');
   const verdict = valid(params.get('verdict'), ['all', 'SIGNAL', 'SPURIOUS', 'ENTERTAINMENT'] as const, 'all');
   const sort = valid(params.get('sort'), SORTS.map((s) => s.id) as Sort[], 'curated');
   const page = Math.max(1, Number(params.get('page')) || 1);
@@ -84,7 +84,7 @@ export default function CatalogGrid({ cards }: { cards: ChartCardData[] }) {
       <div className="mb-6 flex flex-wrap items-center gap-x-6 gap-y-3">
         <div className="flex flex-wrap items-center gap-2">
           <span className="mr-1 font-mono text-xs text-muted">type:</span>
-          {(['all', 'goods', 'nature'] as const).map((c) => (
+          {(['all', 'goods', 'markets', 'nature'] as const).map((c) => (
             <button key={c} type="button" onClick={() => setParam('cat', c)} className={`${CHIP} ${category === c ? CHIP_ACTIVE : CHIP_IDLE}`}>
               {c}
             </button>

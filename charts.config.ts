@@ -105,4 +105,37 @@ export const charts: ChartConfig[] = [
     explanation:
       'The overlay is the daily maximum air temperature in Phoenix, Arizona, from the Open-Meteo ERA5 reanalysis archive — chosen because if heatwaves are going to show up anywhere, it is there. Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. The theory being tested is roughly "risk appetite is seasonal", which the number above evaluates without mercy. The summer spikes are weather; the other line is weather of a different kind.',
   },
+  {
+    slug: 'btc-vs-nasdaq',
+    category: 'markets',
+    title: 'BTC vs Nasdaq 100',
+    subtitle: 'Bitcoin against the Nasdaq 100 (^NDX), the risk-asset benchmark.',
+    primarySeriesId: 'btc-usd',
+    overlaySeriesId: 'nasdaq-100',
+    oneLiner: 'The one pairing on this site that might actually mean something. Sadly.',
+    explanation:
+      'The overlay is the Nasdaq 100 index — the benchmark for exactly the kind of risk asset critics say Bitcoin merely is. Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. If BTC is just tech beta with extra steps, the daily returns will hold hands; if it is its own animal, they won\u2019t. This is the least jokey chart here, which is precisely what makes it dangerous.',
+  },
+  {
+    slug: 'btc-vs-dollar',
+    category: 'markets',
+    title: 'BTC vs the Dollar',
+    subtitle: 'Bitcoin against the US dollar index (DXY), the world\u2019s least fun scoreboard.',
+    primarySeriesId: 'btc-usd',
+    overlaySeriesId: 'dollar-index',
+    oneLiner: 'The thesis says strong dollar, weak Bitcoin. The thesis has not checked since 2021.',
+    explanation:
+      'The overlay is the US dollar index (DXY) — the dollar against a basket of major currencies, the macro crowd\u2019s favorite explanation for everything. The claim being tested: a strengthening dollar drains the speculative pool that floats BTC. Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. Watch for a negative r — this is one of the few charts where the interesting answer would be below zero.',
+  },
+  {
+    slug: 'btc-vs-gold',
+    category: 'markets',
+    title: 'BTC vs Gold',
+    subtitle: 'Bitcoin against gold futures (GC=F). The original unprintable asset meets the new one.',
+    primarySeriesId: 'btc-usd',
+    overlaySeriesId: 'gold-futures',
+    oneLiner: 'Digital gold vs actual gold. One of them is having a better decade.',
+    explanation:
+      'The overlay is front-month gold futures — the asset Bitcoin\u2019s "digital gold" pitch is borrowed from. Both are sold as scarce, unprintable stores of value, so do they trade like it? Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. If the narrative were true you would expect some co-movement; the number above is the narrative\u2019s report card.',
+  },
 ];
