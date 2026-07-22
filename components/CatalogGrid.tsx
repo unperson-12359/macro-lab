@@ -117,14 +117,13 @@ export default function CatalogGrid({ cards }: { cards: ChartCardData[] }) {
         </p>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {visible.map(({ chart, verdict: v, points, lastUpdated }) => (
+          {visible.map(({ chart, points, lastUpdated }) => (
             <ChartCard
               key={chart.slug}
               slug={chart.slug}
               title={chart.title}
               subtitle={chart.subtitle}
               oneLiner={chart.oneLiner}
-              verdict={v}
               points={points}
               lastUpdated={lastUpdated}
             />

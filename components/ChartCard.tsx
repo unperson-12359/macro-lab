@@ -3,15 +3,13 @@
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ColorType, createChart } from 'lightweight-charts';
-import VerdictBadge from './VerdictBadge';
-import type { ChartPoint, Verdict } from '@/lib/types';
+import type { ChartPoint } from '@/lib/types';
 
 interface Props {
   slug: string;
   title: string;
   subtitle: string;
   oneLiner: string;
-  verdict: Verdict;
   points: ChartPoint[];
   lastUpdated: string;
 }
@@ -21,7 +19,6 @@ export default function ChartCard({
   title,
   subtitle,
   oneLiner,
-  verdict,
   points,
   lastUpdated,
 }: Props) {
@@ -66,14 +63,11 @@ export default function ChartCard({
       href={`/charts/${slug}`}
       className="block min-w-0 rounded-2xl border border-line bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-4 transition-all duration-200 hover:-translate-y-1 hover:border-[#f7931a]/40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
     >
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <h2 className="truncate font-display text-base">{title}</h2>
-          <p className="mt-0.5 truncate text-xs text-muted" title={subtitle}>
-            {subtitle}
-          </p>
-        </div>
-        <VerdictBadge verdict={verdict} />
+      <div className="min-w-0">
+        <h2 className="truncate font-display text-base">{title}</h2>
+        <p className="mt-0.5 truncate text-xs text-muted" title={subtitle}>
+          {subtitle}
+        </p>
       </div>
       <div ref={containerRef} className="mt-3 h-20 w-full" data-testid="chart-card-sparkline" />
       <p className="mt-2 truncate text-xs italic text-muted" title={oneLiner}>
