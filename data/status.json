@@ -1,33 +1,34 @@
 {
-  "updatedAt": "2026-07-22T19:12:22.170Z",
+  "updatedAt": "2026-07-22T19:19:49.948Z",
   "sources": {
     "btc-usd": {
-      "ok": true,
+      "ok": false,
       "source": "binance",
       "sourceUrl": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d",
-      "points": 5816,
-      "lastPoint": "2026-07-20"
+      "points": 0,
+      "lastPoint": null,
+      "error": "Binance HTTP 451"
     },
     "lvmh": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MC.PA?interval=1d",
-      "points": 6821,
-      "lastPoint": "2026-07-21"
+      "points": 6822,
+      "lastPoint": "2026-07-22"
     },
     "richemont": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CFR.SW?interval=1d",
-      "points": 7977,
-      "lastPoint": "2026-07-21"
+      "points": 7978,
+      "lastPoint": "2026-07-22"
     },
     "swatch": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/UHR.SW?interval=1d",
-      "points": 7118,
-      "lastPoint": "2026-07-21"
+      "points": 7119,
+      "lastPoint": "2026-07-22"
     },
     "btc-usd-history": {
       "ok": true,
@@ -61,8 +62,8 @@
       "ok": true,
       "source": "computed",
       "sourceUrl": "mean synodic month 29.530588853d, anchor new moon 2000-01-06T18:14Z",
-      "points": 5817,
-      "lastPoint": "2026-07-21"
+      "points": 5818,
+      "lastPoint": "2026-07-22"
     },
     "sunspots-daily": {
       "ok": true,
@@ -75,22 +76,22 @@
       "ok": true,
       "source": "usgs",
       "sourceUrl": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=6",
-      "points": 5817,
-      "lastPoint": "2026-07-21"
+      "points": 5818,
+      "lastPoint": "2026-07-22"
     },
     "hurricane-days": {
       "ok": true,
       "source": "noaa-hurdat2",
       "sourceUrl": "https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2024-040425.txt",
-      "points": 5817,
-      "lastPoint": "2026-07-21"
+      "points": 5818,
+      "lastPoint": "2026-07-22"
     },
     "phoenix-tmax": {
       "ok": true,
       "source": "open-meteo",
       "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=33.45&longitude=-112.07&daily=temperature_2m_max",
-      "points": 5817,
-      "lastPoint": "2026-07-21"
+      "points": 5818,
+      "lastPoint": "2026-07-22"
     },
     "nasdaq-100": {
       "ok": true,
