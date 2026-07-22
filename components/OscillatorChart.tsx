@@ -43,7 +43,7 @@ export default function OscillatorChart({ primary, primaryLabel, oscillator, osc
   const containerRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<IChartApi | null>(null);
   const [timeframe, setTimeframe] = useState<TimeframeId>('10Y');
-  const [logScale, setLogScale] = useState(true);
+  const [logScale, setLogScale] = useState(false);
   // Bumped by the reset button to force the effects to re-apply even when the
   // state values are unchanged (manual pan/zoom doesn't touch React state).
   const [resetTick, setResetTick] = useState(0);
@@ -64,7 +64,7 @@ export default function OscillatorChart({ primary, primaryLabel, oscillator, osc
         horzLines: { color: '#141414' },
       },
       rightPriceScale: { borderColor: AXIS.borderColor, mode: PriceScaleMode.Normal },
-      leftPriceScale: { borderColor: AXIS.borderColor, visible: true, mode: PriceScaleMode.Logarithmic },
+      leftPriceScale: { borderColor: AXIS.borderColor, visible: true, mode: PriceScaleMode.Normal },
       timeScale: { borderColor: AXIS.borderColor, timeVisible: false, minBarSpacing: 0.01 },
       crosshair: {
         vertLine: { color: '#333333' },
@@ -149,7 +149,7 @@ export default function OscillatorChart({ primary, primaryLabel, oscillator, osc
 
   function resetView() {
     setTimeframe('10Y');
-    setLogScale(true);
+    setLogScale(false);
     setResetTick((t) => t + 1);
   }
 
@@ -191,7 +191,7 @@ export default function OscillatorChart({ primary, primaryLabel, oscillator, osc
             type="button"
             onClick={resetView}
             className={`${CONTROL_BTN} ${CONTROL_IDLE}`}
-            title="Reset to the default view (10Y, log scale, centered)"
+            title="Reset to the default view (10Y, linear scale, centered)"
           >
             reset
           </button>

@@ -44,7 +44,7 @@ export default function EventChart({ primary, primaryLabel, eventSets }: Props) 
   const chartRef = useRef<IChartApi | null>(null);
   const primarySeriesRef = useRef<ISeriesApi<'Line'> | null>(null);
   const [timeframe, setTimeframe] = useState<TimeframeId>('Max');
-  const [logScale, setLogScale] = useState(true);
+  const [logScale, setLogScale] = useState(false);
   // Bumped by the reset button to force the effects to re-apply even when the
   // state values are unchanged (manual pan/zoom doesn't touch React state).
   const [resetTick, setResetTick] = useState(0);
@@ -65,7 +65,7 @@ export default function EventChart({ primary, primaryLabel, eventSets }: Props) 
         vertLines: { color: '#141414' },
         horzLines: { color: '#141414' },
       },
-      rightPriceScale: { borderColor: AXIS.borderColor, mode: PriceScaleMode.Logarithmic },
+      rightPriceScale: { borderColor: AXIS.borderColor, mode: PriceScaleMode.Normal },
       timeScale: { borderColor: AXIS.borderColor, timeVisible: false, minBarSpacing: 0.01 },
       crosshair: {
         vertLine: { color: '#333333' },
@@ -156,7 +156,7 @@ export default function EventChart({ primary, primaryLabel, eventSets }: Props) 
 
   function resetView() {
     setTimeframe('Max');
-    setLogScale(true);
+    setLogScale(false);
     setActiveSets(eventSets.map((s) => s.id));
     setResetTick((t) => t + 1);
   }
@@ -209,7 +209,7 @@ export default function EventChart({ primary, primaryLabel, eventSets }: Props) 
             type="button"
             onClick={resetView}
             className={`${CONTROL_BTN} ${CONTROL_IDLE}`}
-            title="Reset to the default view (Max, log scale, all events on)"
+            title="Reset to the default view (Max, linear scale, all events on)"
           >
             reset
           </button>
