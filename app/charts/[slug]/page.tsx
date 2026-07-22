@@ -48,7 +48,7 @@ export default function ChartPage({ params }: Props) {
         <VerdictBadge verdict={verdict} />
       </div>
 
-      <div className="mb-6 grid grid-cols-2 gap-4 rounded-2xl border border-line bg-[#111111] p-5 sm:grid-cols-4">
+      <div className="mb-6 grid grid-cols-2 gap-4 rounded-2xl border border-line bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-5 sm:grid-cols-4">
         <div>
           <p className="font-mono text-xs uppercase tracking-wider text-muted">correlation r</p>
           <p className="mt-1 font-display text-2xl text-paper numbers">{r.toFixed(3)}</p>
@@ -98,7 +98,7 @@ export default function ChartPage({ params }: Props) {
 
       <nav aria-label="More charts" className="mt-14 flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
         {prev ? (
-          <Link rel="prev" href={`/charts/${prev.slug}`} className="group text-sm text-muted">
+          <Link rel="prev" href={`/charts/${prev.slug}`} className="group rounded-full border border-line px-4 py-2 text-sm text-muted transition-all hover:border-[#f7931a]/60 hover:text-paper active:scale-95">
             <span className="font-mono text-xs uppercase tracking-widest">Previous</span>
             <span className="mt-1 block text-paper">
               <span className="inline-block transition-transform duration-150 group-hover:-translate-x-1">←</span>{' '}
@@ -109,7 +109,7 @@ export default function ChartPage({ params }: Props) {
           <span />
         )}
         {next ? (
-          <Link rel="next" href={`/charts/${next.slug}`} className="group text-sm text-muted sm:text-right">
+          <Link rel="next" href={`/charts/${next.slug}`} className="group rounded-full border border-line px-4 py-2 text-sm text-muted transition-all hover:border-[#f7931a]/60 hover:text-paper active:scale-95 sm:text-right">
             <span className="font-mono text-xs uppercase tracking-widest">Next</span>
             <span className="mt-1 block text-paper">
               {next.title}{' '}

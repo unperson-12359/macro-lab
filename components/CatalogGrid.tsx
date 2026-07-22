@@ -12,7 +12,7 @@ type Category = 'all' | 'goods' | 'nature';
 type Sort = 'curated' | 'r-desc' | 'r-asc' | 'name';
 type VerdictFilter = 'all' | Verdict;
 
-const CHIP = 'rounded-full border px-3.5 py-1.5 font-mono text-xs font-medium transition-colors';
+const CHIP = 'rounded-full border px-3.5 py-1.5 font-mono text-xs font-medium transition-all active:scale-95';
 const CHIP_ACTIVE = 'border-[#f7931a]/60 text-[#f7931a]';
 const CHIP_IDLE = 'border-line text-muted hover:border-[#333333] hover:text-paper';
 

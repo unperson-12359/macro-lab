@@ -35,7 +35,7 @@ const TIMEFRAMES = [
 type TimeframeId = (typeof TIMEFRAMES)[number]['id'];
 
 const CONTROL_BTN =
-  'rounded-full border px-3.5 py-1.5 font-mono text-xs font-medium transition-colors';
+  'rounded-full border px-3.5 py-1.5 font-mono text-xs font-medium transition-all active:scale-95';
 const CONTROL_ACTIVE = 'border-[#f7931a]/60 text-[#f7931a]';
 const CONTROL_IDLE = 'border-line text-muted hover:border-[#333333] hover:text-paper';
 

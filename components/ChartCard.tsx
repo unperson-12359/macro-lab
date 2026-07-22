@@ -64,7 +64,7 @@ export default function ChartCard({
   return (
     <Link
       href={`/charts/${slug}`}
-      className="block min-w-0 rounded-2xl border border-line bg-[#111111] p-4 transition-colors hover:border-[#333333] hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
+      className="block min-w-0 rounded-2xl border border-line bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-4 transition-all duration-200 hover:-translate-y-1 hover:border-[#f7931a]/40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">

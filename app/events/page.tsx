@@ -37,7 +37,7 @@ export default function EventsPage() {
           const tops = stats.rows.filter((r) => r.nearTop).length;
           const bottoms = stats.rows.filter((r) => r.nearBottom).length;
           return (
-            <div key={set.id} className="rounded-2xl border border-line bg-[#111111] p-4 transition-colors hover:border-[#333333] hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+            <div key={set.id} className="rounded-2xl border border-line bg-gradient-to-b from-[#141414] to-[#0d0d0d] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f7931a]/40 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
               <p className="text-sm">
                 <span
                   className="mr-2 inline-block h-2 w-2 rounded-full"
