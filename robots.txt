@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://unperson-12359.github.io/macro-lab/sitemap.xml
