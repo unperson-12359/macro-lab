@@ -3,7 +3,6 @@ import type { ChartConfig } from '@/lib/types';
 export const charts: ChartConfig[] = [
   {
     slug: 'btc-vs-luxury-watches',
-    display: { mode: 'rolling-corr' },
     category: 'goods',
     title: 'BTC vs Luxury Watches',
     subtitle: 'Bitcoin against an equal-weighted basket of LVMH, Richemont and Swatch.',
@@ -15,7 +14,6 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-ferrari',
-    display: { mode: 'rolling-corr' },
     category: 'goods',
     title: 'BTC vs Ferrari',
     subtitle: 'Bitcoin against Ferrari N.V. (RACE), purveyor of the official car of imaginary wealth.',
@@ -27,7 +25,6 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-live-cattle',
-    display: { mode: 'rolling-corr' },
     category: 'goods',
     title: 'BTC vs Live Cattle',
     subtitle: 'Bitcoin against front-month live cattle futures (LE=F), in cents per pound.',
@@ -39,7 +36,6 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-gamestop',
-    display: { mode: 'rolling-corr' },
     category: 'goods',
     title: 'BTC vs GameStop',
     subtitle: 'Bitcoin against GameStop (GME). The two assets Wall Street hates, one chart.',
@@ -111,7 +107,6 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-nasdaq',
-    display: { mode: 'rolling-corr' },
     category: 'markets',
     title: 'BTC vs Nasdaq 100',
     subtitle: 'Bitcoin against the Nasdaq 100 (^NDX), the risk-asset benchmark.',
@@ -123,7 +118,6 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-dollar',
-    display: { mode: 'rolling-corr' },
     category: 'markets',
     title: 'BTC vs the Dollar',
     subtitle: 'Bitcoin against the US dollar index (DXY), the world\u2019s least fun scoreboard.',
@@ -135,7 +129,6 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-gold',
-    display: { mode: 'rolling-corr' },
     category: 'markets',
     title: 'BTC vs Gold',
     subtitle: 'Bitcoin against gold futures (GC=F). The original unprintable asset meets the new one.',
