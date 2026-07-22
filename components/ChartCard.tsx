@@ -64,11 +64,11 @@ export default function ChartCard({
   return (
     <Link
       href={`/charts/${slug}`}
-      className="block min-w-0 rounded-lg border border-line bg-[#111111] p-4 transition-colors hover:border-[#333333]"
+      className="block min-w-0 rounded-2xl border border-line bg-[#111111] p-4 transition-colors hover:border-[#333333] hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <h2 className="truncate text-base font-semibold">{title}</h2>
+          <h2 className="truncate font-display text-base">{title}</h2>
           <p className="mt-0.5 truncate text-xs text-muted" title={subtitle}>
             {subtitle}
           </p>

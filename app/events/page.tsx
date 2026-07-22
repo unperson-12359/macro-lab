@@ -19,7 +19,7 @@ export default function EventsPage() {
   return (
     <div>
       <div className="mb-6">
-        <h1 className="text-2xl font-semibold">BTC vs Events</h1>
+        <h1 className="font-display text-2xl">BTC vs Events</h1>
         <p className="mt-1 text-sm text-muted">
           World Cup finals, US elections and Olympics, dropped on the Bitcoin price. Did they mark
           tops or bottoms? We counted — the answer is below the chart, and it is &ldquo;no&rdquo;.
@@ -37,13 +37,13 @@ export default function EventsPage() {
           const tops = stats.rows.filter((r) => r.nearTop).length;
           const bottoms = stats.rows.filter((r) => r.nearBottom).length;
           return (
-            <div key={set.id} className="rounded-lg border border-line bg-[#111111] p-3">
+            <div key={set.id} className="rounded-2xl border border-line bg-[#111111] p-4 transition-colors hover:border-[#333333] hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
               <p className="text-sm">
                 <span
                   className="mr-2 inline-block h-2 w-2 rounded-full"
                   style={{ backgroundColor: set.color }}
                 />
-                <span className="font-semibold">{set.name}</span>{' '}
+                <span className="font-display">{set.name}</span>{' '}
                 <span className="font-mono text-xs text-muted numbers">(n={stats.rows.length})</span>
               </p>
               <p className="mt-2 font-mono text-xs text-muted numbers">

@@ -15,7 +15,7 @@ export default function ChartsPage() {
   return (
     <div>
       <div className="mb-6">
-        <h1 className="text-2xl font-semibold">Charts</h1>
+        <h1 className="font-display text-2xl">Charts</h1>
         <p className="mt-2 text-sm text-muted">
           Each chart pairs BTC with something it probably shouldn&rsquo;t predict. We compute the
           correlation on daily returns and tell you what it&rsquo;s worth. Data updated{' '}

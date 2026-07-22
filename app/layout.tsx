@@ -1,6 +1,18 @@
 import type { Metadata } from 'next';
+import { Archivo_Black, Inter } from 'next/font/google';
 import SiteNav from '@/components/SiteNav';
 import './globals.css';
+
+const display = Archivo_Black({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-display',
+});
+
+const sans = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
 
 export const metadata: Metadata = {
   title: 'Macro Lab',
@@ -9,8 +21,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-ink text-paper antialiased">
+    <html lang="en" className={`${display.variable} ${sans.variable}`}>
+      <body className="min-h-screen bg-ink font-sans text-paper antialiased">
         <SiteNav />
         <main id="content" className="mx-auto max-w-5xl px-4 py-8">{children}</main>
         <footer className="border-t border-line">

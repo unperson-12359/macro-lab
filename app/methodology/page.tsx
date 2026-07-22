@@ -18,13 +18,13 @@ export default function Methodology() {
 
   return (
     <div className="max-w-2xl">
-      <h1 className="text-2xl font-semibold">Methodology</h1>
+      <h1 className="font-display text-2xl">Methodology</h1>
       <p className="mt-2 text-sm text-muted">
         How the numbers on this site are produced, and why you shouldn&rsquo;t trade on them.
       </p>
 
       <section className="mt-8">
-        <h2 className="text-lg font-semibold">Data sources</h2>
+        <h2 className="font-display text-lg">Data sources</h2>
         <p className="mt-2 text-sm text-muted">
           Bitcoin itself blends Binance daily closes (2017-08-17 onward) with a one-time
           blockchain.info backfill (2010-08 → 2017). Everything else is listed below, generated
@@ -60,7 +60,7 @@ export default function Methodology() {
       </section>
 
       <section className="mt-8">
-        <h2 className="text-lg font-semibold">Correlation on daily returns</h2>
+        <h2 className="font-display text-lg">Correlation on daily returns</h2>
         <p className="mt-2 text-sm text-muted">
           We never correlate price levels — two trending lines will look &ldquo;correlated&rdquo; no
           matter what they measure. Instead, each series is converted to daily percentage returns,
@@ -70,7 +70,7 @@ export default function Methodology() {
       </section>
 
       <section className="mt-8">
-        <h2 className="text-lg font-semibold">The verdicts</h2>
+        <h2 className="font-display text-lg">The verdicts</h2>
         <ul className="mt-2 space-y-2 text-sm text-muted">
           <li>
             <span className="font-mono text-emerald-400">SIGNAL</span> — |r| ≥ 0.6. Strong
@@ -88,7 +88,7 @@ export default function Methodology() {
       </section>
 
       <section className="mt-8">
-        <h2 className="text-lg font-semibold">How the charts are drawn</h2>
+        <h2 className="font-display text-lg">How the charts are drawn</h2>
         <p className="mt-2 text-sm text-muted">
           Each chart declares its own display rules. Some charts draw individual occurrences as
           markers along the BTC price, while their correlations run against a rolling count of
@@ -101,7 +101,7 @@ export default function Methodology() {
       </section>
 
       <section className="mt-8">
-        <h2 className="text-lg font-semibold">Event markers</h2>
+        <h2 className="font-display text-lg">Event markers</h2>
         <p className="mt-2 text-sm text-muted">
           The <code>/events</code> page overlays static event dates — sports finals, elections,
           ceremonies, whatever the config file currently holds — on the BTC price. These are
@@ -115,7 +115,7 @@ export default function Methodology() {
       </section>
 
       <section className="mt-8">
-        <h2 className="text-lg font-semibold">Honest labeling</h2>
+        <h2 className="font-display text-lg">Honest labeling</h2>
         <p className="mt-2 text-sm text-muted">
           These pairs were chosen because they are amusing, not because they are predictive. With
           enough candidate series, some will correlate by pure chance, and nothing here accounts for

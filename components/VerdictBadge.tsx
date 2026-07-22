@@ -19,7 +19,7 @@ export default function VerdictBadge({ verdict }: { verdict: Verdict }) {
   const s = STYLES[verdict];
   return (
     <span
-      className={`inline-block shrink-0 rounded border px-1.5 py-0.5 font-mono text-[10px] tracking-wider ${s.className}`}
+      className={`inline-block shrink-0 rounded-full border px-2.5 py-1 font-mono text-[10px] tracking-wider ${s.className}`}
     >
       {s.label}
     </span>

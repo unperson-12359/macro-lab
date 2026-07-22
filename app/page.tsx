@@ -27,7 +27,7 @@ export default function Home() {
         <p className="font-mono text-xs uppercase tracking-widest text-muted">
           Macro Lab — observation, not alpha
         </p>
-        <h1 className="mt-4 max-w-4xl text-[clamp(2.75rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-tight">
+        <h1 className="mt-4 max-w-4xl font-display text-[clamp(2.75rem,7vw,5.5rem)] leading-[1.02] tracking-tight">
           Unconventional Bitcoin indicators.
           <span className="block text-muted">Honestly labeled.</span>
         </h1>
@@ -61,7 +61,7 @@ export default function Home() {
               <span className="hidden flex-1 truncate text-sm text-muted md:block">
                 {chart.oneLiner}
               </span>
-              <span className="ml-auto font-mono text-sm numbers sm:ml-0">
+              <span className="ml-auto font-display text-sm numbers sm:ml-0">
                 r&nbsp;{r.toFixed(3)}
               </span>
               <span className="flex items-center gap-2 font-mono text-xs text-muted">
@@ -92,18 +92,18 @@ export default function Home() {
       </section>
 
       <section className="mt-10 pb-4">
-        <div className="flex gap-8 text-sm">
-          <Link href="/charts" className="group text-paper transition-colors hover:text-[#f7931a]">
-            Browse the full index{' '}
-            <span className="inline-block transition-transform duration-150 group-hover:translate-x-1">
-              →
-            </span>
+        <div className="flex flex-wrap items-center gap-3 text-sm">
+          <Link
+            href="/charts"
+            className="rounded-full bg-[#f7931a] px-5 py-2 text-sm font-medium text-black transition hover:bg-[#ffab3d]"
+          >
+            Browse the full index
           </Link>
-          <Link href="/methodology" className="group text-muted transition-colors hover:text-paper">
-            Methodology{' '}
-            <span className="inline-block transition-transform duration-150 group-hover:translate-x-1">
-              →
-            </span>
+          <Link
+            href="/methodology"
+            className="rounded-full border border-line px-3.5 py-1.5 text-xs font-medium text-muted transition-colors hover:border-[#333333] hover:text-paper"
+          >
+            Methodology
           </Link>
         </div>
       </section>

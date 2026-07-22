@@ -12,8 +12,8 @@ type Category = 'all' | 'goods' | 'nature';
 type Sort = 'curated' | 'r-desc' | 'r-asc' | 'name';
 type VerdictFilter = 'all' | Verdict;
 
-const CHIP = 'rounded border px-2 py-0.5 font-mono text-xs transition-colors';
-const CHIP_ACTIVE = 'border-[#f7931a]/50 bg-[#f7931a]/10 text-[#f7931a]';
+const CHIP = 'rounded-full border px-3.5 py-1.5 font-mono text-xs font-medium transition-colors';
+const CHIP_ACTIVE = 'border-[#f7931a]/60 text-[#f7931a]';
 const CHIP_IDLE = 'border-line text-muted hover:border-[#333333] hover:text-paper';
 
 const SORTS: { id: Sort; label: string }[] = [
@@ -82,7 +82,7 @@ export default function CatalogGrid({ cards }: { cards: ChartCardData[] }) {
   return (
     <div>
       <div className="mb-6 flex flex-wrap items-center gap-x-6 gap-y-3">
-        <div className="flex items-center gap-1">
+        <div className="flex flex-wrap items-center gap-2">
           <span className="mr-1 font-mono text-xs text-muted">type:</span>
           {(['all', 'goods', 'nature'] as const).map((c) => (
             <button key={c} type="button" onClick={() => setParam('cat', c)} className={`${CHIP} ${category === c ? CHIP_ACTIVE : CHIP_IDLE}`}>
@@ -90,7 +90,7 @@ export default function CatalogGrid({ cards }: { cards: ChartCardData[] }) {
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex flex-wrap items-center gap-2">
           <span className="mr-1 font-mono text-xs text-muted">verdict:</span>
           <button type="button" onClick={() => setParam('verdict', 'all')} className={`${CHIP} ${verdict === 'all' ? CHIP_ACTIVE : CHIP_IDLE}`}>
             all
@@ -101,7 +101,7 @@ export default function CatalogGrid({ cards }: { cards: ChartCardData[] }) {
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex flex-wrap items-center gap-2">
           <span className="mr-1 font-mono text-xs text-muted">sort:</span>
           {SORTS.map((s) => (
             <button key={s.id} type="button" onClick={() => setParam('sort', s.id)} className={`${CHIP} ${sort === s.id ? CHIP_ACTIVE : CHIP_IDLE}`}>
@@ -112,7 +112,7 @@ export default function CatalogGrid({ cards }: { cards: ChartCardData[] }) {
       </div>
 
       {visible.length === 0 ? (
-        <p className="border-t border-line py-10 text-sm text-muted">
+        <p className="py-10 text-sm text-muted">
           Nothing matches. Even we don&rsquo;t have a chart for that combination.
         </p>
       ) : (
@@ -133,27 +133,27 @@ export default function CatalogGrid({ cards }: { cards: ChartCardData[] }) {
       )}
 
       {pages > 1 && (
-        <nav aria-label="Pagination" className="mt-10 flex items-center justify-between font-mono text-sm">
+        <nav aria-label="Pagination" className="mt-10 flex items-center justify-between">
           {safePage > 1 ? (
-            <button type="button" onClick={() => setParam('page', String(safePage - 1))} className="group text-muted hover:text-paper">
+            <button type="button" onClick={() => setParam('page', String(safePage - 1))} className={`group ${CHIP} ${CHIP_IDLE}`}>
               <span className="inline-block transition-transform duration-150 group-hover:-translate-x-1">←</span> prev
             </button>
           ) : (
             <span />
           )}
-          <div className="flex gap-4">
+          <div className="flex gap-2">
             {Array.from({ length: pages }, (_, i) => i + 1).map((p) =>
               p === safePage ? (
-                <span key={p} aria-current="page" className="text-[#f7931a] numbers">{p}</span>
+                <span key={p} aria-current="page" className={`${CHIP} ${CHIP_ACTIVE} numbers`}>{p}</span>
               ) : (
-                <button key={p} type="button" onClick={() => setParam('page', String(p))} className="text-muted numbers hover:text-paper">
+                <button key={p} type="button" onClick={() => setParam('page', String(p))} className={`${CHIP} ${CHIP_IDLE} numbers`}>
                   {p}
                 </button>
               )
             )}
           </div>
           {safePage < pages ? (
-            <button type="button" onClick={() => setParam('page', String(safePage + 1))} className="group text-muted hover:text-paper">
+            <button type="button" onClick={() => setParam('page', String(safePage + 1))} className={`group ${CHIP} ${CHIP_IDLE}`}>
               next <span className="inline-block transition-transform duration-150 group-hover:translate-x-1">→</span>
             </button>
           ) : (

@@ -42,28 +42,28 @@ export default function ChartPage({ params }: Props) {
     <div>
       <div className="mb-6 flex items-start justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-semibold">{chart.title}</h1>
+          <h1 className="font-display text-2xl">{chart.title}</h1>
           <p className="mt-1 text-sm text-muted">{chart.subtitle}</p>
         </div>
         <VerdictBadge verdict={verdict} />
       </div>
 
-      <div className="mb-6 grid grid-cols-2 gap-4 font-mono text-xs text-muted sm:grid-cols-4">
+      <div className="mb-6 grid grid-cols-2 gap-4 rounded-2xl border border-line bg-[#111111] p-5 sm:grid-cols-4">
         <div>
-          <p className="uppercase tracking-wider">correlation r</p>
-          <p className="mt-1 text-sm text-paper numbers">{r.toFixed(3)}</p>
+          <p className="font-mono text-xs uppercase tracking-wider text-muted">correlation r</p>
+          <p className="mt-1 font-display text-2xl text-paper numbers">{r.toFixed(3)}</p>
         </div>
         <div>
-          <p className="uppercase tracking-wider">overlap days</p>
-          <p className="mt-1 text-sm text-paper numbers">{n}</p>
+          <p className="font-mono text-xs uppercase tracking-wider text-muted">overlap days</p>
+          <p className="mt-1 font-display text-2xl text-paper numbers">{n}</p>
         </div>
         <div>
-          <p className="uppercase tracking-wider">{primary.name} through</p>
-          <p className="mt-1 text-sm text-paper numbers">{primaryLast}</p>
+          <p className="font-mono text-xs uppercase tracking-wider text-muted">{primary.name} through</p>
+          <p className="mt-1 font-display text-2xl text-paper numbers">{primaryLast}</p>
         </div>
         <div>
-          <p className="uppercase tracking-wider">{overlay.name} through</p>
-          <p className="mt-1 text-sm text-paper numbers">{overlayLast}</p>
+          <p className="font-mono text-xs uppercase tracking-wider text-muted">{overlay.name} through</p>
+          <p className="mt-1 font-display text-2xl text-paper numbers">{overlayLast}</p>
         </div>
       </div>
 
@@ -92,7 +92,7 @@ export default function ChartPage({ params }: Props) {
       </p>
 
       <section className="mt-8 max-w-2xl">
-        <h2 className="text-sm font-semibold">About this pairing</h2>
+        <h2 className="font-display text-sm">About this pairing</h2>
         <p className="mt-2 text-sm text-muted">{chart.explanation}</p>
       </section>
 

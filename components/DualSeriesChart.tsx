@@ -47,8 +47,8 @@ const TIMEFRAMES = [
 type TimeframeId = (typeof TIMEFRAMES)[number]['id'];
 
 const CONTROL_BTN =
-  'rounded border px-2 py-0.5 font-mono text-xs transition-colors';
-const CONTROL_ACTIVE = 'border-[#f7931a]/50 bg-[#f7931a]/10 text-[#f7931a]';
+  'rounded-full border px-3.5 py-1.5 font-mono text-xs font-medium transition-colors';
+const CONTROL_ACTIVE = 'border-[#f7931a]/60 text-[#f7931a]';
 const CONTROL_IDLE = 'border-line text-muted hover:border-[#333333] hover:text-paper';
 
 export default function DualSeriesChart({ primary, overlay, primaryLabel, overlayLabel, overlayLog = true, primaryMarkers = [] }: Props) {
