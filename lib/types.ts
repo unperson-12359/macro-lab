@@ -33,6 +33,8 @@ export interface ChartConfig {
     overlayLog?: boolean;
     /** 'markers' drops the overlay line and plots occurrences on the primary line */
     overlayMode?: 'markers';
+    /** oscillator view: rolling 90d correlation chart, or seasonal-anomaly overlay */
+    mode?: 'rolling-corr' | 'seasonal-anomaly';
   };
 }
 

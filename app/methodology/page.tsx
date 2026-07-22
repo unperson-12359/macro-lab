@@ -69,7 +69,9 @@ export default function Methodology() {
           markers along the BTC price, while their correlations run against a rolling count of
           those occurrences (raw daily counts are mostly zeros, which would quietly shrink the
           return overlap). Count and percentage overlays stay on a linear axis even when log
-          scale is on, because zeros and logarithms do not mix. This is all display-only: every
+          scale is on, because zeros and logarithms do not mix. Some charts are drawn as
+          oscillators — a rolling correlation window, or a seasonal anomaly against the
+          day-of-year average. This is all display-only: every
           statistic on the site is computed from the raw daily files, because smoothing before
           correlating would manufacture agreement that is not there.
         </p>

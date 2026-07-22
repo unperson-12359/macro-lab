@@ -6,7 +6,7 @@ import ChartCard from '@/components/ChartCard';
 import type { ChartCardData } from '@/lib/cards';
 import type { Verdict } from '@/lib/types';
 
-const PAGE_SIZE = 6;
+const PAGE_SIZE = 9;
 
 type Category = 'all' | 'goods' | 'markets' | 'nature';
 type Sort = 'curated' | 'r-desc' | 'r-asc' | 'name';

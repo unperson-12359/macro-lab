@@ -71,6 +71,56 @@ export function toChartPoints(points: SeriesPoint[]): ChartPoint[] {
   return points.map((p) => ({ time: p.d, value: p.v }));
 }
 
+/* ---- Oscillator transforms (display-only; headline stats use raw series) ---- */
+
+/**
+ * Rolling Pearson correlation of the two series' daily returns, inner-joined
+ * on date, over a trailing `window` of overlapping return days. Each output
+ * point is dated at the end of its window; days before the first full window
+ * are omitted. Bounded −1…1.
+ */
+export function rollingCorrelation(
+  a: SeriesPoint[],
+  b: SeriesPoint[],
+  window = 90
+): SeriesPoint[] {
+  const ra = new Map(dailyReturns(a).map((p) => [p.d, p.r]));
+  const rb = new Map(dailyReturns(b).map((p) => [p.d, p.r]));
+  const shared = [...ra.keys()].filter((d) => rb.has(d)).sort();
+  if (shared.length < window) return [];
+
+  const out: SeriesPoint[] = [];
+  for (let i = window - 1; i < shared.length; i++) {
+    const xs: number[] = [];
+    const ys: number[] = [];
+    for (let j = i - window + 1; j <= i; j++) {
+      xs.push(ra.get(shared[j])!);
+      ys.push(rb.get(shared[j])!);
+    }
+    out.push({ d: shared[i], v: pearson(xs, ys) });
+  }
+  return out;
+}
+
+/**
+ * Seasonal anomaly: each value minus the mean of its calendar day
+ * (month-day) across the whole series. Oscillates around 0.
+ */
+export function seasonalAnomaly(points: SeriesPoint[]): SeriesPoint[] {
+  const sums = new Map<string, { sum: number; n: number }>();
+  for (const p of points) {
+    const key = p.d.slice(5); // MM-DD
+    const cur = sums.get(key) ?? { sum: 0, n: 0 };
+    cur.sum += p.v;
+    cur.n += 1;
+    sums.set(key, cur);
+  }
+  return points.map((p) => {
+    const c = sums.get(p.d.slice(5))!;
+    return { d: p.d, v: p.v - c.sum / c.n };
+  });
+}
+
 /**
  * Simple moving average over the trailing `days` values (partial window at the
  * series start). Display smoothing only — statistics use the raw series.

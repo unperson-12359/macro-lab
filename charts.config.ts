@@ -3,6 +3,7 @@ import type { ChartConfig } from '@/lib/types';
 export const charts: ChartConfig[] = [
   {
     slug: 'btc-vs-luxury-watches',
+    display: { mode: 'rolling-corr' },
     category: 'goods',
     title: 'BTC vs Luxury Watches',
     subtitle: 'Bitcoin against an equal-weighted basket of LVMH, Richemont and Swatch.',
@@ -14,6 +15,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-ferrari',
+    display: { mode: 'rolling-corr' },
     category: 'goods',
     title: 'BTC vs Ferrari',
     subtitle: 'Bitcoin against Ferrari N.V. (RACE), purveyor of the official car of imaginary wealth.',
@@ -25,6 +27,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-live-cattle',
+    display: { mode: 'rolling-corr' },
     category: 'goods',
     title: 'BTC vs Live Cattle',
     subtitle: 'Bitcoin against front-month live cattle futures (LE=F), in cents per pound.',
@@ -36,6 +39,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-gamestop',
+    display: { mode: 'rolling-corr' },
     category: 'goods',
     title: 'BTC vs GameStop',
     subtitle: 'Bitcoin against GameStop (GME). The two assets Wall Street hates, one chart.',
@@ -101,12 +105,13 @@ export const charts: ChartConfig[] = [
     primarySeriesId: 'btc-usd',
     overlaySeriesId: 'phoenix-tmax',
     oneLiner: 'Both are accused of boiling the planet. Only one of them tracks summer.',
-    display: { overlayLog: false },
+    display: { overlayLog: false, mode: 'seasonal-anomaly' },
     explanation:
       'The overlay is the daily maximum air temperature in Phoenix, Arizona, from the Open-Meteo ERA5 reanalysis archive — chosen because if heatwaves are going to show up anywhere, it is there. Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. The theory being tested is roughly "risk appetite is seasonal", which the number above evaluates without mercy. The summer spikes are weather; the other line is weather of a different kind.',
   },
   {
     slug: 'btc-vs-nasdaq',
+    display: { mode: 'rolling-corr' },
     category: 'markets',
     title: 'BTC vs Nasdaq 100',
     subtitle: 'Bitcoin against the Nasdaq 100 (^NDX), the risk-asset benchmark.',
@@ -118,6 +123,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-dollar',
+    display: { mode: 'rolling-corr' },
     category: 'markets',
     title: 'BTC vs the Dollar',
     subtitle: 'Bitcoin against the US dollar index (DXY), the world\u2019s least fun scoreboard.',
@@ -129,6 +135,7 @@ export const charts: ChartConfig[] = [
   },
   {
     slug: 'btc-vs-gold',
+    display: { mode: 'rolling-corr' },
     category: 'markets',
     title: 'BTC vs Gold',
     subtitle: 'Bitcoin against gold futures (GC=F). The original unprintable asset meets the new one.',
@@ -170,7 +177,7 @@ export const charts: ChartConfig[] = [
     primarySeriesId: 'btc-usd',
     overlaySeriesId: 'alpine-snowfall',
     oneLiner: 'Powder days vs price discovery. Both peak in winter, which means nothing.',
-    display: { overlayLog: false },
+    display: { overlayLog: false, mode: 'seasonal-anomaly' },
     explanation:
       'The overlay is daily snowfall in Chamonix, in the French Alps, from the Open-Meteo ERA5 reanalysis — the purest seasonal signal we could find after the temperature chart. Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. If you squint, both series have long flat spells interrupted by violent dumps. The correlation number is there to stop you from squinting.',
   },

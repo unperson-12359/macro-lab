@@ -1,10 +1,18 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import DualSeriesChart from '@/components/DualSeriesChart';
+import OscillatorChart from '@/components/OscillatorChart';
 import VerdictBadge from '@/components/VerdictBadge';
 import { loadCharts, loadSeries } from '@/lib/data';
 import { loadMarkersForChart } from '@/lib/markers';
-import { correlationOnReturns, movingAverage, toChartPoints, verdictFromR } from '@/lib/stats';
+import {
+  correlationOnReturns,
+  movingAverage,
+  rollingCorrelation,
+  seasonalAnomaly,
+  toChartPoints,
+  verdictFromR,
+} from '@/lib/stats';
 
 interface Props {
   params: { slug: string };
@@ -26,10 +34,16 @@ export default function ChartPage({ params }: Props) {
   const primaryLast = primary.points[primary.points.length - 1]?.d ?? '—';
   const overlayLast = overlay.points[overlay.points.length - 1]?.d ?? '—';
 
-  // Display-only smoothing for noisy overlays; stats above use the raw series.
+  // Display-only transforms; stats above use the raw series.
+  const mode = chart.display?.mode;
   const smaDays = chart.display?.overlaySmaDays;
-  const overlayDisplay = smaDays ? movingAverage(overlay.points, smaDays) : overlay.points;
-  const overlayLabel = smaDays ? `${overlay.name} · ${smaDays}-day avg` : overlay.name;
+  let overlayDisplay = smaDays ? movingAverage(overlay.points, smaDays) : overlay.points;
+  let overlayLabel = smaDays ? `${overlay.name} · ${smaDays}-day avg` : overlay.name;
+  if (mode === 'seasonal-anomaly') {
+    overlayDisplay = seasonalAnomaly(overlay.points);
+    overlayLabel = `${overlay.name} · anomaly`;
+  }
+  const rolling = mode === 'rolling-corr' ? rollingCorrelation(primary.points, overlay.points) : null;
   const markerMode = chart.display?.overlayMode === 'markers';
   const markerData = markerMode ? loadMarkersForChart(chart.slug) : null;
 
@@ -67,14 +81,30 @@ export default function ChartPage({ params }: Props) {
         </div>
       </div>
 
-      <DualSeriesChart
-        primary={toChartPoints(primary.points)}
-        primaryLabel={primary.name}
-        overlay={markerMode ? undefined : toChartPoints(overlayDisplay)}
-        overlayLabel={overlayLabel}
-        overlayLog={chart.display?.overlayLog ?? true}
-        primaryMarkers={markerData?.markers}
-      />
+      {rolling ? (
+        <>
+          <OscillatorChart
+            primary={toChartPoints(primary.points)}
+            primaryLabel={primary.name}
+            oscillator={toChartPoints(rolling)}
+            oscillatorLabel={`90-day rolling r vs ${overlay.name}`}
+          />
+          <p className="mt-2 font-mono text-xs text-muted">
+            <span className="mr-1 inline-block h-2 w-px bg-[#fbbf24]" /> ±0.3 spurious zone ·{' '}
+            <span className="mr-1 inline-block h-2 w-px bg-[#34d399]" /> ±0.6 signal zone — how the
+            coupling moves over time; the headline r above is the full-window number.
+          </p>
+        </>
+      ) : (
+        <DualSeriesChart
+          primary={toChartPoints(primary.points)}
+          primaryLabel={primary.name}
+          overlay={markerMode ? undefined : toChartPoints(overlayDisplay)}
+          overlayLabel={overlayLabel}
+          overlayLog={chart.display?.overlayLog ?? true}
+          primaryMarkers={markerData?.markers}
+        />
+      )}
 
       {markerData && (
         <p className="mt-2 font-mono text-xs text-muted">
