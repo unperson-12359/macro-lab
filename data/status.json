@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T19:19:49.948Z",
+  "updatedAt": "2026-07-22T19:43:31.312Z",
   "sources": {
     "btc-usd": {
       "ok": false,
@@ -113,6 +113,27 @@
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GC=F?interval=1d",
       "points": 6496,
       "lastPoint": "2026-07-22"
+    },
+    "swallow-sightings": {
+      "ok": true,
+      "source": "gbif",
+      "sourceUrl": "https://api.gbif.org/v1/occurrence/search?taxon_key=9515886&facet=month",
+      "points": 199,
+      "lastPoint": "2026-07-01"
+    },
+    "alpine-snowfall": {
+      "ok": true,
+      "source": "open-meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=45.92&longitude=6.87&daily=snowfall_sum",
+      "points": 5818,
+      "lastPoint": "2026-07-22"
+    },
+    "tidal-range": {
+      "ok": true,
+      "source": "noaa-coops",
+      "sourceUrl": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?station=8518750&product=high_low",
+      "points": 5796,
+      "lastPoint": "2026-06-30"
     }
   }
 }

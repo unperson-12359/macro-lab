@@ -138,4 +138,40 @@ export const charts: ChartConfig[] = [
     explanation:
       'The overlay is front-month gold futures — the asset Bitcoin\u2019s "digital gold" pitch is borrowed from. Both are sold as scarce, unprintable stores of value, so do they trade like it? Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. If the narrative were true you would expect some co-movement; the number above is the narrative\u2019s report card.',
   },
+  {
+    slug: 'btc-vs-bird-migration',
+    category: 'nature',
+    title: 'BTC vs Bird Migration',
+    subtitle: 'Bitcoin against monthly barn swallow sightings in the GBIF database.',
+    primarySeriesId: 'btc-usd',
+    overlaySeriesId: 'swallow-sightings',
+    oneLiner: 'Every spring the swallows return. Every cycle the hodlers ask if this time is different.',
+    display: { overlayLog: false },
+    explanation:
+      'The overlay is the monthly count of barn swallow occurrences in GBIF, the global biodiversity database — citizen scientists, museums and eBird imports recording one of Earth\u2019s great migrations. The wave is real: sightings explode every May. Because the data is monthly, the correlation joins on month-starts only and the overlap n is small; the page says so. Whether birds front-run Bitcoin is, strictly speaking, still an open question.',
+  },
+  {
+    slug: 'btc-vs-tides',
+    category: 'nature',
+    title: 'BTC vs the Tides',
+    subtitle: 'Bitcoin against the daily tidal range at The Battery, New York (NOAA).',
+    primarySeriesId: 'btc-usd',
+    overlaySeriesId: 'tidal-range',
+    oneLiner: 'The moon pulls the oceans twice a day. What it does to speculators is unmeasured — until now.',
+    display: { overlayLog: false },
+    explanation:
+      'The overlay is the daily tidal range at The Battery, at the tip of Manhattan — the difference between the day\u2019s highest and lowest water, from NOAA\u2019s tide gauges. It breathes on a 14-day spring-neap cycle, driven by the same moon we already checked against BTC elsewhere on this site. Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. Wall Street\u2019s doorstep floods on schedule; the market upstairs does not.',
+  },
+  {
+    slug: 'btc-vs-snowfall',
+    category: 'nature',
+    title: 'BTC vs Snowfall',
+    subtitle: 'Bitcoin against daily snowfall in Chamonix, France (Open-Meteo ERA5).',
+    primarySeriesId: 'btc-usd',
+    overlaySeriesId: 'alpine-snowfall',
+    oneLiner: 'Powder days vs price discovery. Both peak in winter, which means nothing.',
+    display: { overlayLog: false },
+    explanation:
+      'The overlay is daily snowfall in Chamonix, in the French Alps, from the Open-Meteo ERA5 reanalysis — the purest seasonal signal we could find after the temperature chart. Bitcoin is Binance daily closes with the pre-2017 blockchain.info backfill. If you squint, both series have long flat spells interrupted by violent dumps. The correlation number is there to stop you from squinting.',
+  },
 ];

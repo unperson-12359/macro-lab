@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:pages": "node scripts/build-pages.mjs",
-    "fetch": "tsx scripts/fetch-btc.ts && tsx scripts/fetch-basket.ts && tsx scripts/fetch-yahoo-series.ts && tsx scripts/fetch-earthquakes.ts && tsx scripts/fetch-sunspots.ts && tsx scripts/build-moon-phase.ts && tsx scripts/fetch-hurricanes.ts && tsx scripts/fetch-temperature.ts",
+    "fetch": "tsx scripts/fetch-btc.ts && tsx scripts/fetch-basket.ts && tsx scripts/fetch-yahoo-series.ts && tsx scripts/fetch-earthquakes.ts && tsx scripts/fetch-sunspots.ts && tsx scripts/build-moon-phase.ts && tsx scripts/fetch-hurricanes.ts && tsx scripts/fetch-temperature.ts && tsx scripts/fetch-bird-migration.ts && tsx scripts/fetch-tides.ts && tsx scripts/fetch-snowfall.ts",
     "fetch:history": "tsx scripts/backfill-btc-history.ts"
   },
   "dependencies": {
