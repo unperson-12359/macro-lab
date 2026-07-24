@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T08:45:10.106Z",
+  "updatedAt": "2026-07-24T08:42:23.117Z",
   "sources": {
     "btc-usd": {
       "ok": false,
@@ -13,22 +13,22 @@
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MC.PA?interval=1d",
-      "points": 6823,
-      "lastPoint": "2026-07-23"
+      "points": 6824,
+      "lastPoint": "2026-07-24"
     },
     "richemont": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/CFR.SW?interval=1d",
-      "points": 7979,
-      "lastPoint": "2026-07-23"
+      "points": 7980,
+      "lastPoint": "2026-07-24"
     },
     "swatch": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/UHR.SW?interval=1d",
-      "points": 7120,
-      "lastPoint": "2026-07-23"
+      "points": 7121,
+      "lastPoint": "2026-07-24"
     },
     "btc-usd-history": {
       "ok": true,
@@ -41,29 +41,29 @@
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/RACE?interval=1d",
-      "points": 2702,
-      "lastPoint": "2026-07-22"
+      "points": 2703,
+      "lastPoint": "2026-07-23"
     },
     "live-cattle": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/LE=F?interval=1d",
-      "points": 6363,
-      "lastPoint": "2026-07-22"
+      "points": 6364,
+      "lastPoint": "2026-07-23"
     },
     "gamestop-gme": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GME?interval=1d",
-      "points": 6148,
-      "lastPoint": "2026-07-22"
+      "points": 6149,
+      "lastPoint": "2026-07-23"
     },
     "moon-illumination": {
       "ok": true,
       "source": "computed",
       "sourceUrl": "mean synodic month 29.530588853d, anchor new moon 2000-01-06T18:14Z",
-      "points": 5819,
-      "lastPoint": "2026-07-23"
+      "points": 5820,
+      "lastPoint": "2026-07-24"
     },
     "sunspots-daily": {
       "ok": true,
@@ -76,43 +76,43 @@
       "ok": true,
       "source": "usgs",
       "sourceUrl": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minmagnitude=6",
-      "points": 5819,
-      "lastPoint": "2026-07-23"
+      "points": 5820,
+      "lastPoint": "2026-07-24"
     },
     "hurricane-days": {
       "ok": true,
       "source": "noaa-hurdat2",
       "sourceUrl": "https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2024-040425.txt",
-      "points": 5819,
-      "lastPoint": "2026-07-23"
+      "points": 5820,
+      "lastPoint": "2026-07-24"
     },
     "phoenix-tmax": {
       "ok": true,
       "source": "open-meteo",
       "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=33.45&longitude=-112.07&daily=temperature_2m_max",
-      "points": 5819,
-      "lastPoint": "2026-07-23"
+      "points": 5820,
+      "lastPoint": "2026-07-24"
     },
     "nasdaq-100": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/^NDX?interval=1d",
-      "points": 10280,
-      "lastPoint": "2026-07-22"
+      "points": 10281,
+      "lastPoint": "2026-07-23"
     },
     "dollar-index": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?interval=1d",
-      "points": 14106,
-      "lastPoint": "2026-07-23"
+      "points": 14107,
+      "lastPoint": "2026-07-24"
     },
     "gold-futures": {
       "ok": true,
       "source": "yahoo",
       "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GC=F?interval=1d",
-      "points": 6497,
-      "lastPoint": "2026-07-23"
+      "points": 6498,
+      "lastPoint": "2026-07-24"
     },
     "swallow-sightings": {
       "ok": true,
@@ -125,8 +125,8 @@
       "ok": true,
       "source": "open-meteo",
       "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=45.92&longitude=6.87&daily=snowfall_sum",
-      "points": 5819,
-      "lastPoint": "2026-07-23"
+      "points": 5820,
+      "lastPoint": "2026-07-24"
     },
     "tidal-range": {
       "ok": true,
